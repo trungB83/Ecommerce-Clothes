@@ -9,9 +9,9 @@ import PostDetail from "./containers/posts/PostDetail";
 import ProductDetail from "./containers/products/ProductDetail";
 import ListProduct from "./containers/products/ListProduct";
 import Cart from "./containers/cart/Cart";
-import Login from "./containers/login/Login";
-import Register from "./containers/register/Register";
-import Contact from "./containers/contact/Contact";
+// import Login from "./containers/login/Login";
+// import Register from "./containers/register/Register";
+// import Contact from "./containers/contact/Contact";
 
 const App = () => {
   return (
@@ -35,15 +35,15 @@ const App = () => {
         <Route path="/cart/">
           <Cart />
         </Route>
-        <Route path="/login/">
+        {/* <Route path="/login/">
           <Login />
-        </Route>
-        <Route path="/register/">
+        </Route> */}
+        {/* <Route path="/register/">
           <Register />
-        </Route>
-        <Route path="/contact/">
+        </Route> */}
+        {/* <Route path="/contact/">
           <Contact />
-        </Route>
+        </Route> */}
 
 
 
