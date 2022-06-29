@@ -1,21 +1,176 @@
 {
-    "product": [
+    "product-detail": [
       {
-        "id": 1,
-        "productId": 101,
-        "name": "Alice"
+        "productId": 1,
+        "title-product": "Đầm suông cổ tròn “2099 Valentino”",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "880.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png"
       },
       {
-        "id": 2,
-        "userId": 102,
-        "name": "Bob"
+        "productId": 2,
+        "title-product": "Đầm xòe cổ bẻ tay ngắn phối viền đính cúc",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "425.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20190705_1562338347_dam-xoe-co-be-tay-ngan-phoi-vien-dinh-cuc-d-1-247x296.png"
       },
       {
-        "id": 3,
-        "userId": 103,
-        "name": "Carol"
+        "productId": 3,
+        "title-product": "Đầm suông tay ngắn phối viền họa tiết hoa văn",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "1.300.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200622_1592828390_dam-suong-tay-ngan-phoi-vien-hoa-tiet-hoa-van-1-247x296.png"
+      },
+      {
+        "productId": 4,
+        "title-product": "Đầm suông tay hến eo thắt đai họa tiết",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "1.750.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200518_1589815664_dam-suong-tay-hen-eo-that-dai-hoa-tiet-1-247x296.png"
+      },
+      {
+        "productId": 5,
+        "title-product": "Đầm cổ tim eo thắt đai xẻ vạt sau",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "1.750.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200504_1588610267_dam-co-tim-eo-that-dai-xe-vat-sau-1-247x296.png"
+      },
+      {
+        "productId": 6,
+        "title-product": "Đầm suông eo thắt đai họa tiết kẻ phối chữ",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "1.250.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200525_1590423822_2020_05_24_14_45_img_0004-247x296.jpg"
+      },
+      {
+        "productId": 7,
+        "title-product": "Đầm xòe xếp tầng tay lửng bo chun",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "425.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200526_1590426385_2020_05_24_16_09_img_0039-247x296.jpg"
+      },
+      {
+        "productId": 8,
+        "title-product": "Đầm lụa đuôi cá dáng dài hai dây họa tiết hoa hồng",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "1.080.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200721_1595344059_2020_07_19_15_26_img_0076-247x296.jpg"
+      },
+      {
+        "productId": 9,
+        "title-product": "Đầm suông tay ngắn tua rua eo thắt nơ",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "1.320.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200518_1589814257_dam-suong-tay-ngan-tua-rua-eo-that-no-1-247x296.png"
+      },
+      {
+        "productId": 10,
+        "title-product": "Đầm lụa suông cổ V tay bèo phối chuỗi hạt",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "1.780.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200422_1587570552_dam-no-chuoi-ngoc-1-247x296.jpg"
+      },
+      {
+        "productId": 11,
+        "title-product": "Đầm đuôi cá cổ tròn tay ngắn “fendi Roma”",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "1.250.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200115_1579100927_dam-duoi-ca-co-tron-tay-ngan-fendi-roma-1-247x296.png"
+      },
+      {
+        "productId": 12,
+        "title-product": "Đầm suông ngắn tay viền phối họa tiết",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "1.120.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200212_1581520152_dam-suong-ngan-tay-vien-phoi-hoa-tietd-1-247x296.png"
+      },
+      {
+        "productId": 13,
+        "title-product": "Đầm suông dài tay đai eo xếp ly đính đá",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "1.780.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20191011_1570809664_dam-suong-dai-tay-dai-eo-xep-ly-dinh-da-1-247x296.png"
+      },
+      {
+        "productId": 14,
+        "title-product": "Đầm đuôi cá họa tiết hoa hồng eo thắt nơ",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "1.650.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200601_1591005623_dam-duoi-ca-hoa-tiet-hoa-hong-eo-that-no-1-247x296.png"
+      },
+      {
+        "productId": 15,
+        "title-product": "Áo lụa hoa hồng cổ chun tay lồng đèn",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "730.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200407_1586272984_anh_chup_mau_45-29-247x296.jpg"
+      },
+      {
+        "productId": 16,
+        "title-product": "Áo nữ cổ thuyền nơ sau xếp ly trước tay lồng đèn",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "560.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200205_1580921092_ao-so-mi-dai-tay-co-that-no-trai-tim-2-247x296.jpg"
+      },
+      {
+        "productId": 17,
+        "title-product": "Áo nữ Gucci cổ tròn dáng suông họa tiết hoa cúc",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "820.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200723_1595499296_2020_07_19_14_23_img_0042-247x296.jpg"
+      },
+      {
+        "productId": 18,
+        "title-product": "Áo lụa nữ tay dài cổ trụ viền bèo phối nơ",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "1.150.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200514_1589467171_ao-lua-dai-tay-co-v-phoi-ren-1-247x296.png"
       }
       
+    ],
+    
+    "post-detail" :[
+      {
+        "postId": 1,
+        "title-product": "Váy hoa nhí cơn sốt mùa hè của mọi cô gái",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "425.000đ",
+        "thumbnail":[
+          "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png",
+          "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png",
+          "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png"
+        ]
+      },
+      {
+        "postId": 2,
+        "title-product": "Váy hoa nhí cơn sốt mùa hè của mọi cô gái",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "425.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png"
+      },
+      {
+        "postId": 3,
+        "title-product": "Váy hoa nhí cơn sốt mùa hè của mọi cô gái",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "425.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png"
+      },
+      {
+        "postId": 4,
+        "title-product": "Váy hoa nhí cơn sốt mùa hè của mọi cô gái",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "425.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png"
+      },
+      {
+        "postId": 5,
+        "title-product": "Váy hoa nhí cơn sốt mùa hè của mọi cô gái",
+        "short-decription-product": "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
+        "Price-product" : "425.000đ",
+        "thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png"
+      }
+
+
     ]
     
   }

@@ -1,13 +1,6 @@
-body {
-
-}
 
 * {
     box-sizing: border-box;
-}
-
-.header {
-    
 }
 
 .header .topbar-menu {
@@ -131,10 +124,6 @@ body {
     justify-content: space-between;
 }
 
-.header .bottom-menu .wrapper-bottom-menu .wrapper-menu-left {
-    
-}
-
 .header .bottom-menu .wrapper-bottom-menu .wrapper-menu-left .nav-bar {
     margin :0;
     padding: 0;
@@ -150,10 +139,6 @@ body {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-}
-
-.header .bottom-menu .wrapper-bottom-menu .wrapper-menu-right {
-
 }
 
 .header .bottom-menu .wrapper-bottom-menu .wrapper-menu-right .btn-sale {
@@ -242,6 +227,10 @@ body {
 .main-content .title-list-products {
     font-size: 23px;
     margin-bottom: 17px;
+}
+
+.main-products {
+    padding: 10px 0;
 }
 
 .product-small {
