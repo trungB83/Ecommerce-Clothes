@@ -13,15 +13,20 @@ var dbConn = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'node_js_api'
+    database: 'Ecommerce'
 });
 dbConn.connect();
+
+
 app.get('/users', function (req, res) {
     dbConn.query('SELECT * FROM users', function (error, results, fields) {
         if (error) throw error;
         return res.send({ error: false, data: results, message: 'users list.' });
     });
 });
+
+
+
 app.get('/user/:id', function (req, res) {
     let user_id = req.params.id;
     if (!user_id) {
@@ -32,6 +37,10 @@ app.get('/user/:id', function (req, res) {
         return res.send({ error: false, data: results[0], message: 'users list.' });
     });
 });
+
+
+
+
 app.post('/user', function (req, res) {
     let user = req.body.user;
     if (!user) {
@@ -42,6 +51,10 @@ app.post('/user', function (req, res) {
         return res.send({ error: false, data: results, message: 'New user has been created successfully.' });
     });
 });
+
+
+
+
 app.put('/user', function (req, res) {
     let user_id = req.body.user_id;
     let user = req.body.user;
@@ -55,6 +68,7 @@ app.put('/user', function (req, res) {
 });
 
 
+
 app.delete('/user', function (req, res) {
     let user_id = req.body.user_id;
     if (!user_id) {
@@ -65,7 +79,9 @@ app.delete('/user', function (req, res) {
         return res.send({ error: false, data: results, message: 'User has been updated successfully.' });
     });
 });
-app.listen(3000, function () {
-    console.log('Node app is running on port 3000');
+
+
+app.listen(3001, function () {
+    console.log('Node app is running on port 3001');
 });
 module.exports = app;

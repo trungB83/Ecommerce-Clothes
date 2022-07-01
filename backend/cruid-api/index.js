@@ -1,12 +1,10 @@
-var http = require('http');
+var express = require('express');
+var app = express();
 
-
-var sever  =  http.createServer(function (req, res)  {
-    res.end("hellow ")
-
+app.get('/', function (req, res) {
+  res.send('Hello World!'); // This will serve your request to '/'.
 });
 
-
-sever.listen(3000, function () {
-    console.log("listening on port 3000...");
-});
+app.listen(8000, function () {
+  console.log('Example app listening on port 8000!');
+ });
