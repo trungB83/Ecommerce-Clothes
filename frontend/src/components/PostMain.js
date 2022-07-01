@@ -44,7 +44,7 @@ const PostMain = () => {
                             </ul>
                     </div>
                     <div className="share-social">
-                            <ul className="share-social-list">
+                        <ul className="share-social-list">
                                 <li className="share-social-item"><a href=""><i className="fa fa-facebook-square" aria-hidden="true"></i>
                                 </a></li>
                                 <li className="share-social-item"><a href=""><i className="fa fa-twitter-square" aria-hidden="true"></i>
@@ -55,7 +55,7 @@ const PostMain = () => {
                                 </a></li>
                                 <li className="share-social-item"><a href=""><i className="fa fa-pinterest-square" aria-hidden="true"></i>
                                 </a></li>
-                            </ul>
+                        </ul>
                     </div>
                 </div>
             </div>
