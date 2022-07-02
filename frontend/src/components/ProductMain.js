@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React, {  } from "react";
 import imgProduct from "../assets/images/20200526_1590426385_2020_05_24_16_09_img_0039-247x296.jpg"
+
 
 const ProductMain = () => {
   return (

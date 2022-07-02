@@ -1,7 +1,10 @@
 import React from "react";
 import imgProduct from "../assets/images/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png";
+import ProductDetail from "../containers/products/ProductDetail";
 
-const PostList = () => {
+
+const PostList = (props) => {
+  console.log(props);
   return (
     <>
       <div className="list-product-main">
@@ -45,96 +48,24 @@ const PostList = () => {
               </form>
             </div>
             <div className="row main-products">
-              <div className="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+              {props.products.map((product, index) => (
+                <div className="col-lg-2 col-md-4 col-sm-6 col-xs-6">
                 <div className="product-small">
                   <div className="box-image">
                     <a href="">
-                      <img className="thumbnail" src={imgProduct} alt="thumbnail" />
+                      <img className="thumbnail" src={product.prod_thumbnail} alt="thumbnail" />
                     </a>
                   </div>
                   <div className="box-text">
                     <h5 className="title-product">
-                      <a href="#">Đầm suông cổ tròn “2099 Valentino”</a>
+                      <a href="#">{product.prod_name}</a>
                     </h5>
-                    <p className="price-product">880.000đ</p>
+                    <p className="price-product">{product.prod_price}</p>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                <div className="product-small">
-                  <div className="box-image">
-                    <a href="">
-                      <img className="thumbnail" src={imgProduct} alt="thumbnail" />
-                    </a>
-                  </div>
-                  <div className="box-text">
-                    <h5 className="title-product">
-                      <a href="#">Đầm suông cổ tròn “2099 Valentino”</a>
-                    </h5>
-                    <p className="price-product">880.000đ</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                <div className="product-small">
-                  <div className="box-image">
-                    <a href="">
-                      <img className="thumbnail" src={imgProduct} alt="thumbnail" />
-                    </a>
-                  </div>
-                  <div className="box-text">
-                    <h5 className="title-product">
-                      <a href="#">Đầm suông cổ tròn “2099 Valentino”</a>
-                    </h5>
-                    <p className="price-product">880.000đ</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                <div className="product-small">
-                  <div className="box-image">
-                    <a href="">
-                      <img className="thumbnail" src={imgProduct} alt="thumbnail" />
-                    </a>
-                  </div>
-                  <div className="box-text">
-                    <h5 className="title-product">
-                      <a href="#">Đầm suông cổ tròn “2099 Valentino”</a>
-                    </h5>
-                    <p className="price-product">880.000đ</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                <div className="product-small">
-                  <div className="box-image">
-                    <a href="">
-                      <img className="thumbnail" src={imgProduct} alt="thumbnail" />
-                    </a>
-                  </div>
-                  <div className="box-text">
-                    <h5 className="title-product">
-                      <a href="#">Đầm suông cổ tròn “2099 Valentino”</a>
-                    </h5>
-                    <p className="price-product">880.000đ</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                <div className="product-small">
-                  <div className="box-image">
-                    <a href="">
-                      <img className="thumbnail" src={imgProduct} alt="thumbnail" />
-                    </a>
-                  </div>
-                  <div className="box-text">
-                    <h5 className="title-product">
-                      <a href="#">Đầm suông cổ tròn “2099 Valentino”</a>
-                    </h5>
-                    <p className="price-product">880.000đ</p>
-                  </div>
-                </div>
-              </div>
+              ))}
+              
             </div>
           </div>
         </div>

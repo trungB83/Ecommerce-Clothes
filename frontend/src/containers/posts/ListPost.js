@@ -1,17 +1,24 @@
-import React, { Component } from "react";
-import bannerImg from "../../assets/images/20200718_1595086365_listen-to-the-cicadas-web.jpg";
+import React, {useState, useEffect } from "react";
 import Header from "../../components/Header";
-import ProductList from "../../components/HomeProductList";
 import Footer from "../../components/Footer";
 import PostList from "../../components/PostList";
+import axios from "axios";
 
 const ListPost = () => {
+  const [posts, setPosts] = useState([]);
+
+  // useEffect( async () => {
+  //   let res = await axios.get("http://localhost:3003/posts");
+  //   setPosts(res.data.p_list);
+  //   console.log(res.data);
+  // },[])
+
   return (
-    <div>
+    <>
       <Header />
-      <PostList />
+      <PostList post={posts}/>
       <Footer />
-    </div>
+    </>
   );
 };
 
