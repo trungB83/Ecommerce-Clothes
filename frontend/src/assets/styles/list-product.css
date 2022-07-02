@@ -1,14 +1,8 @@
-body {
-
-}
 
 * {
     box-sizing: border-box;
 }
 
-.header {
-    
-}
 
 .header .topbar-menu {
     background-color: #f8a83a;
@@ -131,9 +125,6 @@ body {
     justify-content: space-between;
 }
 
-.header .bottom-menu .wrapper-bottom-menu .wrapper-menu-left {
-    
-}
 
 .header .bottom-menu .wrapper-bottom-menu .wrapper-menu-left .nav-bar {
     margin :0;
@@ -152,9 +143,6 @@ body {
     font-size: 18px;
 }
 
-.header .bottom-menu .wrapper-bottom-menu .wrapper-menu-right {
-
-}
 
 .header .bottom-menu .wrapper-bottom-menu .wrapper-menu-right .btn-sale {
     border-radius: 99px;
@@ -190,9 +178,6 @@ body {
     padding-top: 10px;
 }
 
-.list-prodct-main .head-list .title-page {
-
-}
 
 .title-page {
     font-size:24px;

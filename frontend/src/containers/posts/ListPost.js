@@ -6,17 +6,20 @@ import axios from "axios";
 
 const ListPost = () => {
   const [posts, setPosts] = useState([]);
-
-  // useEffect( async () => {
-  //   let res = await axios.get("http://localhost:3003/posts");
-  //   setPosts(res.data.p_list);
-  //   console.log(res.data);
-  // },[])
+  
+  useEffect(() => {
+    const getPosts = async () => {
+      let postRes = await axios.get("http://localhost:3003/posts");
+      setPosts(postRes.data.list);
+      console.log("post respose", postRes.data);
+    };
+    getPosts();
+  }, []);
 
   return (
     <>
       <Header />
-      <PostList post={posts}/>
+      <PostList posts={posts}/>
       <Footer />
     </>
   );

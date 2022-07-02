@@ -1,5 +1,7 @@
 import React from "react";
 import imgPost from "../assets/images/20190225_1551097166_mega-6208-3-247x296.jpg";
+import '../assets/styles/detail-post.css';
+
 
 const PostList = (props) => {
   console.log(props);
@@ -9,12 +11,12 @@ const PostList = (props) => {
       <div className="list-post">
         <div className="container">
           <div className="row">
-            {props.posts.map((post, index) => (
-              <div className="col-lg-12">
+          {props.posts.map((post, index)=> (
+            <div className="col-lg-12" key={post.post_id}>
                 <div className="main-list">
                   <div className="box-list">
                     <div className="box-img">
-                      <img className="img" src={post.post_thumbnail} alt="" />
+                      <img className="img" src={imgPost} alt="" />
                     </div>
                     <div className="box-text">
                       <div className="title">
@@ -24,8 +26,9 @@ const PostList = (props) => {
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+          </div>
+          )
+          )}
           </div>
         </div>
       </div>

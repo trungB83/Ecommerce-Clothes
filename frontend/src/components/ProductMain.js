@@ -1,4 +1,5 @@
 import React, {  } from "react";
+import { Link } from "react-router-dom";
 import imgProduct from "../assets/images/20200526_1590426385_2020_05_24_16_09_img_0039-247x296.jpg"
 
 
@@ -12,11 +13,11 @@ const ProductMain = () => {
               <div className="wrapper-navigation">
                 <ul className="nav">
                   <li className="nav-link">
-                    <a href="">Trang Chủ</a>
+                    <Link to="">Trang Chủ</Link>
                   </li>
                   /
                   <li className="nav-link">
-                    <a href="">Váy Đầm</a>
+                    <Link to="">Váy Đầm</Link>
                   </li>
                 </ul>
               </div>

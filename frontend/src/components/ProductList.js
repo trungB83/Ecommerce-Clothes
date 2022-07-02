@@ -1,7 +1,7 @@
 import React from "react";
 import imgProduct from "../assets/images/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png";
 import ProductDetail from "../containers/products/ProductDetail";
-
+import "../assets/styles/list-product.css"
 
 const PostList = (props) => {
   console.log(props);
@@ -49,7 +49,7 @@ const PostList = (props) => {
             </div>
             <div className="row main-products">
               {props.products.map((product, index) => (
-                <div className="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+                <div className="col-lg-2 col-md-4 col-sm-6 col-xs-6" key={product.prod_id}>
                 <div className="product-small">
                   <div className="box-image">
                     <a href="">

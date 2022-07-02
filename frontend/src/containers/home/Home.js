@@ -9,9 +9,7 @@ import axios from "axios";
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [posts, setPosts] = useState([]);
-
-
-
+  
   useEffect(() => {
     const getProducts = async () => {
       let productRes = await axios.get("http://localhost:3003/products");
