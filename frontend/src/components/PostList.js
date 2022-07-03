@@ -1,6 +1,6 @@
 import React from "react";
 import imgPost from "../assets/images/20190225_1551097166_mega-6208-3-247x296.jpg";
-import '../assets/styles/detail-post.css';
+import '../assets/styles/list-post.css';
 
 
 const PostList = (props) => {

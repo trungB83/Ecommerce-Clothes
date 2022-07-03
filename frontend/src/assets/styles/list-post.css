@@ -1,13 +1,7 @@
-body {
 
-}
 
 * {
     box-sizing: border-box;
-}
-
-.header {
-    
 }
 
 .header .topbar-menu {
@@ -125,8 +119,6 @@ body {
     justify-content: space-between;
 }
 
-.header .bottom-menu .wrapper-bottom-menu .wrapper-menu-left {
-}
 
 .header .bottom-menu .wrapper-bottom-menu .wrapper-menu-left .nav-bar {
     margin :0;
@@ -144,8 +136,6 @@ body {
     font-size: 18px;
 }
 
-.header .bottom-menu .wrapper-bottom-menu .wrapper-menu-right {
-}
 
 .header .bottom-menu .wrapper-bottom-menu .wrapper-menu-right .btn-sale {
     border-radius: 99px;
@@ -182,14 +172,14 @@ body {
 .list-post .main-list .box-list {
     display: flex;
     padding: 10px;
-    border: 1px solid #bbb1b1 ;
-    border-radius: 25px;
+    border: 1px solid #bbb1b1;
+    border-radius: 15px;
     margin: 10px 0;
     align-items: center;
 }
 
 .list-post .main-list .box-list .box-img .img {
-    border-radius: 25px;
+    border-radius: 15px;
     padding-right: 10px;
 }
 
@@ -197,14 +187,6 @@ body {
     
 }
 
-.cart{
-    margin: auto;
-    max-width: 950px;
-    width: 90%;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 1rem;
-    border: transparent;
-}
 
 
 

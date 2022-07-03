@@ -1,7 +1,7 @@
 import React from "react";
 import imgProduct from "../assets/images/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png";
 import ProductDetail from "../containers/products/ProductDetail";
-import "../assets/styles/list-product.css"
+import "../assets/styles/list-product.css";
 
 const PostList = (props) => {
   console.log(props);
@@ -27,33 +27,43 @@ const PostList = (props) => {
               </div>
             </div>
             <div className="col-5 wrapper-head-right">
-              <div className="show-number-item">
-                <p>Hiển thị tất cả 11 kết quả</p>
+              <div className="wrapper-head-right">
+                <div className="show-number-item">
+                  <p>Hiển thị tất cả 11 kết quả</p>
+                </div>
+                <form method="get" className="form-sort">
+                  <select className="sort">
+                    <option value="normal" selected="selected">
+                      Thứ tự mặc định
+                    </option>
+                    <option value="popularity">
+                      Thứ tự theo mức độ phổ biến
+                    </option>
+                    <option value="rating">Thứ tự theo điểm đánh giá</option>
+                    <option value="date">Thứ tự theo mức mới nhất</option>
+                    <option value="price">Thứ tự theo giá: thấp đến cao</option>
+                    <option value="price-desc">
+                      Thứ tự theo giá: cao đến thấp
+                    </option>
+                  </select>
+                </form>
               </div>
-              <form method="get" className="form-sort">
-                <select className="sort">
-                  <option value="normal" selected="selected">
-                    Thứ tự mặc định
-                  </option>
-                  <option value="popularity">
-                    Thứ tự theo mức độ phổ biến
-                  </option>
-                  <option value="rating">Thứ tự theo điểm đánh giá</option>
-                  <option value="date">Thứ tự theo mức mới nhất</option>
-                  <option value="price">Thứ tự theo giá: thấp đến cao</option>
-                  <option value="price-desc">
-                    Thứ tự theo giá: cao đến thấp
-                  </option>
-                </select>
-              </form>
             </div>
-            <div className="row main-products">
-              {props.products.map((product, index) => (
-                <div className="col-lg-2 col-md-4 col-sm-6 col-xs-6" key={product.prod_id}>
+          </div>
+          <div className="row main-products">
+            {props.products.map((product, index) => (
+              <div
+                className="col-lg-2 col-md-4 col-sm-6 col-xs-6"
+                key={product.prod_id}
+              >
                 <div className="product-small">
                   <div className="box-image">
                     <a href="">
-                      <img className="thumbnail" src={product.prod_thumbnail} alt="thumbnail" />
+                      <img
+                        className="thumbnail"
+                        src={product.prod_thumbnail}
+                        alt="thumbnail"
+                      />
                     </a>
                   </div>
                   <div className="box-text">
@@ -64,9 +74,7 @@ const PostList = (props) => {
                   </div>
                 </div>
               </div>
-              ))}
-              
-            </div>
+            ))}
           </div>
         </div>
       </div>

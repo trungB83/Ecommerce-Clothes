@@ -1,5 +1,6 @@
 import React, { } from "react";
 import thumbnails from "../assets/images/20190227_1551259013_dam-lua-co-tru-tay-lung-hoa-tiet-hoa-van-1-247x296.jpg"
+import "../assets/styles/detail-post.css"
 
 const PostMain = () => {
   return (

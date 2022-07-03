@@ -1,6 +1,7 @@
 import React, {  } from "react";
 import { Link } from "react-router-dom";
 import imgProduct from "../assets/images/20200526_1590426385_2020_05_24_16_09_img_0039-247x296.jpg"
+import "../assets/styles/detail-product.css"
 
 
 const ProductMain = () => {

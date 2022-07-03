@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start" : "json-sever --watch index.js --port 3002"
+    "start" : "json-server --watch index.js  --port 3003"
   },
   "keywords": [],
   "author": "",

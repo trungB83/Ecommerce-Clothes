@@ -58,9 +58,8 @@
 }
 
 .header .main-menu .wrapper-search .wrapper-right #search-bar{
-    border-radius: 5px !important;
-    background-color: white !important;
-    color: red !important;
+    border-radius: 5px ;
+    color: red ;
     border: 1px solid #ddd;
     padding: 0 0.75em;
     height: 2.507em;
@@ -181,7 +180,7 @@
 
 .title-page {
     font-size:24px;
-    color: #403c3c;
+    color: #000000;
 }
 
 
@@ -195,11 +194,13 @@
 
 .nav-main .nav-item {
     list-style: none;
+    text-decoration: none;
     
 }
 
 .nav-main .nav-item a {
-    color: #4c4c4c;
+    color: #000000;
+    text-decoration: none;
 }
 
 .nav-main .nav-item a:hover {
@@ -212,8 +213,21 @@
 
 .wrapper-head-right {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
 }
+
+.wrapper-head-right .show-number-item {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+.wrapper-head-right .show-number-item p {
+    margin : 0;
+    color:rgb(0, 0, 0);
+}
+
+
 
 .product-small {
     width: 100%;

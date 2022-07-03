@@ -12,7 +12,7 @@ const RegisterMain = () => {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="title-form">
-                                        <H2>Đăng ký</H2>
+                                        <h2>Đăng ký</h2>
                                     </div>
                                 </div>
                                 <div className="col-lg-12 form-group">
