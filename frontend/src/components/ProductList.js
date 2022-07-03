@@ -1,7 +1,6 @@
 import React from "react";
-import imgProduct from "../assets/images/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png";
-import ProductDetail from "../containers/products/ProductDetail";
 import "../assets/styles/list-product.css";
+import { Link } from "react-router-dom";
 
 const PostList = (props) => {
   console.log(props);
@@ -16,11 +15,11 @@ const PostList = (props) => {
                 <div className="navigation">
                   <ul className="nav-main">
                     <li className="nav-item">
-                      <a href="#">Trang Chủ</a>
+                      <Link to="#">Trang Chủ</Link>
                     </li>
                     /
                     <li className="nav-item">
-                      <a href="#">Áo</a>
+                      <Link to="#">Áo</Link>
                     </li>
                   </ul>
                 </div>
@@ -58,17 +57,17 @@ const PostList = (props) => {
               >
                 <div className="product-small">
                   <div className="box-image">
-                    <a href="">
+                    <Link to="">
                       <img
                         className="thumbnail"
                         src={product.prod_thumbnail}
                         alt="thumbnail"
                       />
-                    </a>
+                    </Link>
                   </div>
                   <div className="box-text">
                     <h5 className="title-product">
-                      <a href="#">{product.prod_name}</a>
+                      <Link to="#">{product.prod_name}</Link>
                     </h5>
                     <p className="price-product">{product.prod_price}</p>
                   </div>

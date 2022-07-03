@@ -49,15 +49,15 @@ const Header = () => {
               <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                 <div className="wrapper-cart">
                   <div className="wrapper-hotline">
-                    <a to="#" className="btn-hotline">
+                    <Link to="#" className="btn-hotline">
                       <i className="fa fa-phone" aria-hidden="true"></i>{" "}
                       098989898
-                    </a>
+                    </Link>
                   </div>
                   <div className="wrapper-icon">
-                    <a to="#" className="cart">
+                    <Link to="#" className="cart">
                       <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -70,9 +70,9 @@ const Header = () => {
               <div className="wrapper-menu-left">
                 <ul className="nav-bar">
                   <li className="nav-link vertical-menu">
-                    <a to="#">
+                    <Link to="#">
                       <i className="fa fa-bars" aria-hidden="true"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-link">
                     <Link to="#">Trang chủ</Link>

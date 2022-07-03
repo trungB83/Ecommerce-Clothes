@@ -1,4 +1,5 @@
 import React, { } from "react";
+import { Link } from "react-router-dom";
 import thumbnails from "../assets/images/20190227_1551259013_dam-lua-co-tru-tay-lung-hoa-tiet-hoa-van-1-247x296.jpg"
 import "../assets/styles/detail-post.css"
 
@@ -37,25 +38,25 @@ const PostMain = () => {
                     <div className="list-post">
                             <h3 className="more">Xem thêm</h3>
                             <ul className="more-post-list">
-                                <li className="list-inline"><a href="#">ĐIỆU ĐÀ VỚI VÁY ÁO XUYÊN THẤU CHẤT LIỆU ORGANZA</a></li>
-                                <li className="list-inline"><a href="#">TƯNG BỪNG TAN DỊCH CÙNG NHAU LIÊN HOAN SALE LỄ 30-04</a></li>
-                                <li className="list-inline"><a href="#">Váy hoa nhí – cơn sốt mùa hè của mọi cô gái</a></li>
-                                <li className="list-inline"><a href="#">10 Set quần áo nâng tầm thời trang mặc nhà</a></li>
-                                <li className="list-inline"><a href="#">Tiệc hè sang trọng – Dành cho quý cô thành đạt</a></li>
+                                <li className="list-inline"><Link to="#">ĐIỆU ĐÀ VỚI VÁY ÁO XUYÊN THẤU CHẤT LIỆU ORGANZA</Link></li>
+                                <li className="list-inline"><Link to="#">TƯNG BỪNG TAN DỊCH CÙNG NHAU LIÊN HOAN SALE LỄ 30-04</Link></li>
+                                <li className="list-inline"><Link to="#">Váy hoa nhí – cơn sốt mùa hè của mọi cô gái</Link></li>
+                                <li className="list-inline"><Link to="#">10 Set quần áo nâng tầm thời trang mặc nhà</Link></li>
+                                <li className="list-inline"><Link to="#">Tiệc hè sang trọng – Dành cho quý cô thành đạt</Link></li>
                             </ul>
                     </div>
                     <div className="share-social">
                         <ul className="share-social-list">
-                                <li className="share-social-item"><a href=""><i className="fa fa-facebook-square" aria-hidden="true"></i>
-                                </a></li>
-                                <li className="share-social-item"><a href=""><i className="fa fa-twitter-square" aria-hidden="true"></i>
-                                </a></li>
-                                <li className="share-social-item"><a href=""><i className="fa fa-envelope" aria-hidden="true"></i>
-                                </a></li>
-                                <li className="share-social-item"><a href=""><i className="fa fa-pinterest-square" aria-hidden="true"></i>
-                                </a></li>
-                                <li className="share-social-item"><a href=""><i className="fa fa-pinterest-square" aria-hidden="true"></i>
-                                </a></li>
+                                <li className="share-social-item"><Link to=""><i className="fa fa-facebook-square" aria-hidden="true"></i>
+                                </Link></li>
+                                <li className="share-social-item"><Link to=""><i className="fa fa-twitter-square" aria-hidden="true"></i>
+                                </Link></li>
+                                <li className="share-social-item"><Link to=""><i className="fa fa-envelope" aria-hidden="true"></i>
+                                </Link></li>
+                                <li className="share-social-item"><Link to=""><i className="fa fa-pinterest-square" aria-hidden="true"></i>
+                                </Link></li>
+                                <li className="share-social-item"><Link to=""><i className="fa fa-pinterest-square" aria-hidden="true"></i>
+                                </Link></li>
                         </ul>
                     </div>
                 </div>

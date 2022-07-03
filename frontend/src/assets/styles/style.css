@@ -379,6 +379,7 @@ body {
 .footer .footer-main .footer-link .social li a {
     color:white;
     font-size: 20px;
+    text-decoration: none;
 }
 
 .footer .footer-main .footer-link .social li a i {
@@ -397,6 +398,7 @@ body {
 .footer .footer-main .footer-link .support li a {
     color:white;
     font-size: 18px;
+    text-decoration: none;
 }
 
 .footer .footer-main .footer-link .support li a i {

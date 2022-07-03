@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HomeProductList = (props) => {
   console.log(props);
@@ -18,19 +19,19 @@ const HomeProductList = (props) => {
                 <div className="menu-categories">
                   <ul className="list-menu-categories">
                     <li className="nav-link-category">
-                      <a href="#">Váy đầm công sở</a>
+                      <Link to="#">Váy đầm công sở</Link>
                     </li>
                     <li className="nav-link-category">
-                      <a href="#">Giày</a>
+                      <Link to="#">Giày</Link>
                     </li>
                     <li className="nav-link-category">
-                      <a href="#">Quần</a>
+                      <Link to="#">Quần</Link>
                     </li>
                     <li className="nav-link-category">
-                      <a href="#">Set bộ</a>
+                      <Link to="#">Set bộ</Link>
                     </li>
                     <li className="nav-link-category">
-                      <a href="#">Set jean áo phông</a>
+                      <Link to="#">Set jean áo phông</Link>
                     </li>
                   </ul>
                 </div>
@@ -44,17 +45,17 @@ const HomeProductList = (props) => {
                 <div className="col-lg-2 col-md-4 col-sm-6 col-xs-6 " key={product.prod_id}>
                   <div className="product-small">
                     <div className="box-image">
-                      <a href="">
+                      <Link to="">
                         <img
                           className="thumbnail"
                           src={product.prod_thumbnail}
                           alt="thumbnail"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="box-text">
                       <h5 className="title-product">
-                        <a href="#">{product.prod_name}</a>
+                        <Link to="#">{product.prod_name}</Link>
                       </h5>
                       <p className="price-product">{product.prod_price}</p>
                     </div>

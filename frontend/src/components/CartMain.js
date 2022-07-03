@@ -18,7 +18,7 @@ const CartMain = () => {
               <div className="box-cart">
                 <div className="row main-product">
                   <div className="col-2 image">
-                    <img className="img-fluid" src={thumbnailProduct} />
+                    <img className="img-fluid" src={thumbnailProduct} alt="thumbnail product" />
                   </div>
                   <div className="col name">
                     <div className="row">
@@ -37,7 +37,7 @@ const CartMain = () => {
                 </div>
                 <div className="row main-product">
                   <div className="col-2 image">
-                    <img className="img-fluid" src={thumbnailProduct} />
+                    <img className="img-fluid" src={thumbnailProduct} alt="thumbnail product" />
                   </div>
                   <div className="col name">
                     <div className="row">

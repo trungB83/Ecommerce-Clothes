@@ -1,6 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import "./assets/styles/style.css";
 import Home from "./containers/home/Home";
@@ -11,6 +10,8 @@ import ListProduct from "./containers/products/ListProduct";
 import Cart from "./containers/cart/Cart";
 import Login from "./containers/login/Login";
 import Contact from "./containers/contact/Contact";
+import LogRocket from 'logrocket';
+LogRocket.init('kf4f9f/ecommerceshopcloths');
 const App = () => {
   return (
     <Router>

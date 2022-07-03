@@ -1,6 +1,7 @@
 import React, { } from "react";
 import { Link } from "react-router-dom";
 import logoFooter from "../assets/images/02_logo.png";
+import "../assets/styles/style.css";
 
 
 
@@ -91,31 +92,31 @@ const Footer = () => {
                     <h3 className="title-footer">Hỗ trợ thanh toán</h3>
                     <ul>
                       <li>
-                        <a to="#">
+                        <Link to="#">
                           <i className="fa fa-cc-visa" aria-hidden="true"></i>
                           Visa
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a to="#">
+                        <Link to="#">
                           <i className="fa fa-money" aria-hidden="true"></i>Tiền
                           mặt
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a to="#">
+                        <Link to="#">
                           <i className="fa fa-exchange" aria-hidden="true"></i>
                           Chuyển khoản
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a to="#">
+                        <Link to="#">
                           <i
                             className="fa fa-credit-card-alt"
                             aria-hidden="true"
                           ></i>
                           Atm
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>

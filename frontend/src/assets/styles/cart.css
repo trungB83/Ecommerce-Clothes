@@ -184,10 +184,6 @@
 }
 
 
-
-
-
-
 .main-product {
     align-items: center;
     border-bottom: 1px ridge;
@@ -195,9 +191,6 @@
     margin-bottom: 5px;
 }
 
-.back-to-shop {
-    
-}
 
 .back-to-shop .back {
     text-decoration: none;
