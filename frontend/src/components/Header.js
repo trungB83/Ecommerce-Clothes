@@ -75,16 +75,16 @@ const Header = () => {
                     </Link>
                   </li>
                   <li className="nav-link">
-                    <Link to="#">Trang chủ</Link>
+                    <Link to="/">Trang chủ</Link>
                   </li>
                   <li className="nav-link">
                     <Link to="#">Giới thiệu</Link>
                   </li>
                   <li className="nav-link">
-                    <Link to="#">Áo</Link>
+                    <Link to="products/1">Áo</Link>
                   </li>
                   <li className="nav-link">
-                    <Link to="#">Giày</Link>
+                    <Link to="">Giày</Link>
                   </li>
                   <li className="nav-link">
                     <Link to="#">Quần</Link>
@@ -102,13 +102,13 @@ const Header = () => {
                     <Link to="#">Váy đầm</Link>
                   </li>
                   <li className="nav-link">
-                    <Link to="#">Tin tức</Link>
+                    <Link to="/posts/">Tin tức</Link>
                   </li>
                   <li className="nav-link">
                     <Link to="#">Chính sách</Link>
                   </li>
                   <li className="nav-link">
-                    <Link to="#">Liên hệ</Link>
+                    <Link to="/contact/">Liên hệ</Link>
                   </li>
                 </ul>
               </div>
