@@ -1,10 +1,10 @@
-import React, { } from "react";
+import React from "react";
 import bannerTop from "../assets/images/deal_top.jpg";
 import logo from "../assets/images/02_logo.png";
 import imgWrapper from "../assets/images/shipping-icon-v.png";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div>
       <div className="header">
@@ -55,7 +55,7 @@ const Header = () => {
                     </Link>
                   </div>
                   <div className="wrapper-icon">
-                    <Link to="#" className="cart">
+                    <Link to="/cart/" className="cart">
                       <i className="fa fa-shopping-cart" aria-hidden="true"></i>
                     </Link>
                   </div>
@@ -80,32 +80,13 @@ const Header = () => {
                   <li className="nav-link">
                     <Link to="#">Giới thiệu</Link>
                   </li>
-                  <li className="nav-link">
-                    <Link to="products/1">Áo</Link>
+                  {/* {props.category_list.map((category_list,index)=> (
+                    <li className="nav-link" key={category_list.product_category_id}>
+                    <Link to="">{category_list.product_category_name}</Link>
                   </li>
-                  <li className="nav-link">
-                    <Link to="">Giày</Link>
-                  </li>
-                  <li className="nav-link">
-                    <Link to="#">Quần</Link>
-                  </li>
-                  <li className="nav-link">
-                    <Link to="#">Set bộ</Link>
-                  </li>
-                  <li className="nav-link">
-                    <Link to="#">Set jean áo phông</Link>
-                  </li>
-                  <li className="nav-link">
-                    <Link to="#">Túi xách</Link>
-                  </li>
-                  <li className="nav-link">
-                    <Link to="#">Váy đầm</Link>
-                  </li>
+                  ))} */}
                   <li className="nav-link">
                     <Link to="/posts/">Tin tức</Link>
-                  </li>
-                  <li className="nav-link">
-                    <Link to="#">Chính sách</Link>
                   </li>
                   <li className="nav-link">
                     <Link to="/contact/">Liên hệ</Link>
@@ -113,7 +94,9 @@ const Header = () => {
                 </ul>
               </div>
               <div className="wrapper-menu-right">
-                <button className="btn-sale">Sale now</button>
+                <Link to="/login">
+                  <button className="btn-sale">Đăng nhập</button>
+                </Link>
               </div>
             </div>
           </div>

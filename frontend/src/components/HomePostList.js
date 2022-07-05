@@ -1,7 +1,5 @@
 import React, {  } from "react";
 import { Link } from "react-router-dom";
-import thumbnailPost1 from "../assets/images/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png";
-
 
 const HomePostList = (props) => {
 console.log(props);
@@ -14,8 +12,8 @@ console.log(props);
             <div className="col-lg-2 col-md-4 col-sm-6 col-xs-6" key={post.post_id} >
               <div className="post-small">
                 <div className="box-image">
-                  <Link to="/post-detail/1">
-                    <img className="thumbnail-post" src={thumbnailPost1} alt="thumbnail"/>
+                  <Link to={`/post-detail/${post.post_id}`}>
+                    <img className="thumbnail-post" src={post.post_thumbnail} alt="thumbnail"/>
                   </Link>
                 </div>
                 <div className="box-text">

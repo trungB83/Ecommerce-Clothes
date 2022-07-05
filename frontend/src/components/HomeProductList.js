@@ -55,7 +55,7 @@ const HomeProductList = (props) => {
                     </div>
                     <div className="box-text">
                       <h5 className="title-product">
-                        <Link to="#">{product.prod_name}</Link>
+                        <Link to={`/product-detail/${product.prod_id}`}>{product.prod_name}</Link>
                       </h5>
                       <p className="price-product">{product.prod_price}</p>
                     </div>

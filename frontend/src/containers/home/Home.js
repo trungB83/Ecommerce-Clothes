@@ -8,13 +8,16 @@ import axios from "axios";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
+  const [categoryProducts, setCategoryProducts] = useState([]);
   const [posts, setPosts] = useState([]);
   
   useEffect(() => {
     const getProducts = async () => {
       let productRes = await axios.get("http://localhost:3003/products");
       setProducts(productRes.data.list);
+      setCategoryProducts(productRes.data.category_list);
       console.log("product respon", productRes.data);
+      console.log("product category respon", productRes.data.category_list);
     };
   
     const getPosts = async () => {
@@ -28,7 +31,7 @@ const Home = () => {
 
   return (
     <>
-      <Header />
+      <Header category_list={categoryProducts}/>
       <div className="main-content">
         <div className="main-banner">
           <img className="banner-img" src={bannerImg} alt="banner" />

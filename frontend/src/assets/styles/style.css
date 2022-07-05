@@ -1,3 +1,7 @@
+html {
+    width: 100%;
+}
+
 body {
     background-color: #fff !important;
 }
@@ -159,6 +163,7 @@ body {
 
 .header .bottom-menu .wrapper-bottom-menu .wrapper-menu-right .btn-sale:hover {
     background: #3a3a3a;
+    transition: 0.25s;
 
 }
 
@@ -292,7 +297,7 @@ body {
 
 .post-list {
     padding: 30px 15px;
-    background-color: #e7e4dd17;
+    background-color: #d7d7d7d9;
 
 }
 
@@ -340,6 +345,7 @@ body {
 
 .post-small:hover .date-post {
     display: block;
+    transition: 0.5s;
 }
 
 .post-small .date-post {

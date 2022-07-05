@@ -9,8 +9,6 @@
       "post_content" : "pót còn ten",
       "post_author" : "admin1",
       "post_thumbnail" : [
-        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png",
-        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png",
         "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png"
       ]
     },
@@ -23,8 +21,6 @@
       "post_content" : "pót còn ten",
       "post_author" : "admin1",
       "post_thumbnail" : [
-        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png",
-        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png",
         "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png"
       ]
     },
@@ -37,8 +33,6 @@
       "post_content" : "pót còn ten",
       "post_author" : "admin1",
       "post_thumbnail" : [
-        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png",
-        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png",
         "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png"
       ]
     },
@@ -51,8 +45,30 @@
       "post_content" : "pót còn ten",
       "post_author" : "admin1",
       "post_thumbnail" : [
-        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png",
-        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png",
+        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png"
+      ]
+    },
+    {
+      "post_id": 5,
+      "post_category_id": "catePo1",
+      "post_category_name": "Tin Tức",
+      "post_name" : "Váy hoa nhí cơn sốt mùa hè của mọi cô gái",
+      "post_description" : "Đầm suông cổ tròn “2099 Valentino",
+      "post_content" : "pót còn ten",
+      "post_author" : "admin1",
+      "post_thumbnail" : [
+        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png"
+      ]
+    },
+    {
+      "post_id": 6,
+      "post_category_id": "catePo1",
+      "post_category_name": "Tin Tức",
+      "post_name" : "Váy hoa nhí cơn sốt mùa hè của mọi cô gái",
+      "post_description" : "Đầm suông cổ tròn “2099 Valentino",
+      "post_content" : "pót còn ten",
+      "post_author" : "admin1",
+      "post_thumbnail" : [
         "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png"
       ]
     }
