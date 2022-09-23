@@ -11,7 +11,7 @@ const PostList = (props) => {
           <div className="row">
             <div className="col-7">
               <div className="wrapper-head-left">
-                <h1 className="title-page">Áo</h1>
+                <h1 className="title-page">{props.currentCategory.product_category_name}</h1>
                 <div className="navigation">
                   <ul className="nav-main">
                     <li className="nav-item">
@@ -19,7 +19,7 @@ const PostList = (props) => {
                     </li>
                     /
                     <li className="nav-item">
-                      <Link to="#">Áo</Link>
+                      <Link to="#">{props.currentCategory.product_category_name}</Link>
                     </li>
                   </ul>
                 </div>
@@ -57,7 +57,7 @@ const PostList = (props) => {
               >
                 <div className="product-small">
                   <div className="box-image">
-                    <Link to="">
+                    <Link to={`/product-detail/${product.prod_id}`}>
                       <img
                         className="thumbnail"
                         src={product.prod_thumbnail}
@@ -67,7 +67,7 @@ const PostList = (props) => {
                   </div>
                   <div className="box-text">
                     <h5 className="title-product">
-                      <Link to="#">{product.prod_name}</Link>
+                      <Link to={`/product-detail/${product.prod_id}`}>{product.prod_name}</Link>
                     </h5>
                     <p className="price-product">{product.prod_price}</p>
                   </div>

@@ -3,7 +3,7 @@
     "list": [
       {
         "prod_id": 1,
-        "prod_category_id": "cateP1",
+        "prod_category_id": 1,
         "prod_category_name": "Đầm",
         "prod_description" : "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
         "prod_price" :"880.000đ",
@@ -13,7 +13,7 @@
       },
       {
         "prod_id": 2,
-        "prod_category_id": "cateP2",
+        "prod_category_id": 2,
         "prod_category_name": "Áo",
         "prod_description" : "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
         "prod_price" :"420.000đ",
@@ -23,7 +23,7 @@
       },
       {
         "prod_id": 3,
-        "prod_category_id": "cateP3",
+        "prod_category_id": 3,
         "prod_category_name": "Váy",
         "prod_description" : "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
         "prod_price" :"1.300.000đ",
@@ -33,7 +33,7 @@
       },
       {
         "prod_id": 4,
-        "prod_category_id": "cateP4",
+        "prod_category_id": 4,
         "prod_category_name": "Quần",
         "prod_description" : "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
         "prod_price" :"1.750.000đ",
@@ -43,7 +43,7 @@
       },
       {
         "prod_id": 5,
-        "prod_category_id": "cateP5",
+        "prod_category_id": 6,
         "prod_category_name": "Bộ",
         "prod_description" : "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
         "prod_price" :"1.750.000đ",
@@ -53,7 +53,7 @@
       },
       {
         "prod_id": 6,
-        "prod_category_id": "cateP6",
+        "prod_category_id": 6,
         "prod_category_name": "Jean",
         "prod_description" : "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
         "prod_price" :"1.250.000đ",
@@ -63,7 +63,7 @@
       },
       {
         "prod_id": 7,
-        "prod_category_id": "cateP1",
+        "prod_category_id": 1,
         "prod_category_name": "Đầm",
         "prod_description" : "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
         "prod_price" :"425.000đ",
@@ -73,7 +73,7 @@
       },
       {
         "prod_id": 8,
-        "prod_category_id": "cateP1",
+        "prod_category_id": 1,
         "prod_category_name": "Đầm",
         "prod_description" : "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
         "prod_price" :"1.080.000đ",
@@ -83,7 +83,7 @@
       },
       {
         "prod_id": 9,
-        "prod_category_id": "cateP1",
+        "prod_category_id": 1,
         "prod_category_name": "Đầm",
         "prod_description" : "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
         "prod_price" :"1.320.000đ",
@@ -93,7 +93,7 @@
       },
       {
         "prod_id": 10,
-        "prod_category_id": "cateP1",
+        "prod_category_id": 1,
         "prod_category_name": "Đầm",
         "prod_description" : "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
         "prod_price" :"1.780.000đ",
@@ -103,7 +103,7 @@
       },
       {
         "prod_id": 11,
-        "prod_category_id": "cateP1",
+        "prod_category_id": 1,
         "prod_category_name": "Đầm",
         "prod_description" : "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
         "prod_price" :"1.250.000đ",
@@ -113,48 +113,99 @@
       },
       {
         "prod_id": 12,
-        "prod_category_id": "cateP1",
+        "prod_category_id": 1,
         "prod_category_name": "Đầm",
         "prod_description" : "Đầm thiết kế dáng suông. Thiết kế cổ đầm dáng tròn, tay đầm dáng ngắn. Đầm tone trơn phối chữ “2099 Valentino",
         "prod_price" :"1.120.000đ",
         "prod_name" : "Đầm suông ngắn tay viền phối họa tiết",
         "prod_thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200212_1581520152_dam-suong-ngan-tay-vien-phoi-hoa-tietd-1-247x296.png",
         "prod_author" : "admin1"
+      },
+      {
+        "prod_id": 13,
+        "prod_category_id": 5,
+        "prod_category_name": "Bộ",
+        "prod_description" : "Set bộ thể thao nữ gồm áo ngắn tay và quần xẻ gấu họa tiết cầu ngũ sắc",
+        "prod_price" :"999.000đ",
+        "prod_name" : "Đầm suông ngắn tay viền phối họa tiết",
+        "prod_thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200630_1593528142_xqa_6468-247x296.jpg",
+        "prod_author" : "admin1"
+      },
+      {
+        "prod_id": 14,
+        "prod_category_id": 5,
+        "prod_category_name": "Bộ",
+        "prod_description" : "Set bộ thể thao nữ Moschino gồm áo mũ sau và quần dài bo gấu họa tiết chữ",
+        "prod_price" :"850.000đ",
+        "prod_name" : "Đầm suông ngắn tay viền phối họa tiết",
+        "prod_thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200630_1593528234_xqa_6757-247x296.jpg",
+        "prod_author" : "admin1"
+      },
+      {
+        "prod_id": 15,
+        "prod_category_id": 2,
+        "prod_category_name": "Áo",
+        "prod_description" : "Áo lụa nữ tay dài cổ trụ viền bèo phối nơ",
+        "prod_price" :"850.000đ",
+        "prod_name" : "Đầm suông ngắn tay viền phối họa tiết",
+        "prod_thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200514_1589467171_ao-lua-dai-tay-co-v-phoi-ren-1-247x296.png",
+        "prod_author" : "admin1"
+      },
+      {
+        "prod_id": 16,
+        "prod_category_id": 2,
+        "prod_category_name": "Áo",
+        "prod_description" : "Áo nữ Chanel nỉ xốp dài tay cổ tròn logo thêu",
+        "prod_price" :"850.000đ",
+        "prod_name" : "Đầm suông ngắn tay viền phối họa tiết",
+        "prod_thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200829_1598698468_2020_08_28_15_14_img_0082-copy-2-247x296.jpg",
+        "prod_author" : "admin1"
+      },
+      {
+        "prod_id": 17,
+        "prod_category_id": 2,
+        "prod_category_name": "Áo",
+        "prod_description" : "Áo nữ cổ thuyền nơ sau xếp ly trước tay lồng đèn",
+        "prod_price" :"850.000đ",
+        "prod_name" : "Đầm suông ngắn tay viền phối họa tiết",
+        "prod_thumbnail" : "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200205_1580921092_ao-so-mi-dai-tay-co-that-no-trai-tim-2-247x296.jpg",
+        "prod_author" : "admin1"
       }
+
     ],
     "category_list" : [
       {
-        "product_category_id" : "cateP1",
+        "product_category_id" : 1,
         "product_category_name" : "Đầm",
         "totail_products_in_category" : "99",
         "author_category" : "admin1"
       },
       {
-        "product_category_id" : "cateP2",
+        "product_category_id" : 2,
         "product_category_name" : "Áo",
         "totail_products_in_category" : "99",
         "author_category" : "admin1"
       },
       {
-        "product_category_id" : "cateP3",
+        "product_category_id" : 3,
         "product_category_name" : "Váy",
         "totail_products_in_category" : "99",
         "author_category" : "admin1"
       },
       {
-        "product_category_id" : "cateP4",
+        "product_category_id" : 4,
         "product_category_name" : "Quần",
         "totail_products_in_category" : "99",
         "author_category" : "admin1"
       },
       {
-        "product_category_id" : "cateP5",
+        "product_category_id" : 5,
         "product_category_name" : "Bộ",
         "totail_products_in_category" : "99",
         "author_category" : "admin1"
       },
       {
-        "product_category_id" : "cateP6",
+        "product_category_id" : 6,
         "product_category_name" : "Jean",
         "totail_products_in_category" : "99",
         "author_category" : "admin1"

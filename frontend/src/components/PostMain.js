@@ -15,11 +15,12 @@ const PostMain = (props) => {
               </div>
               <div className="main-post">
                 <p>{props.post.post_content}</p>
-                <img
+                <div className="imgWrapper"><img
                   className="img-thumbnail"
                   src={props.post.post_thumbnail}
                   alt="img-thumbnail"
-                />
+                /></div>
+                
               </div>
               <div className="list-post">
                 <h3 className="more">Xem thêm</h3>

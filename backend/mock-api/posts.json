@@ -2,11 +2,11 @@
   "list" :[
     {
       "post_id": 1,
-      "post_category_id": "catePo1",
+      "post_category_id": 1,
       "post_category_name": "Tin Tức",
       "post_name" : "Váy hoa nhí cơn sốt mùa hè của mọi cô gái",
       "post_description" : "Đầm suông cổ tròn “2099 Valentino",
-      "post_content" : "pót còn ten",
+      "post_content" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
       "post_author" : "admin1",
       "post_thumbnail" : [
         "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png"
@@ -14,69 +14,69 @@
     },
     {
       "post_id": 2,
-      "post_category_id": "catePo1",
+      "post_category_id": 1,
       "post_category_name": "Tin Tức",
-      "post_name" : "Váy hoa nhí cơn sốt mùa hè của mọi cô gái",
+      "post_name" : "Tiệc hè sang trọng – Dành cho quý cô thành đạt",
       "post_description" : "Đầm suông cổ tròn “2099 Valentino",
-      "post_content" : "pót còn ten",
+      "post_content" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
       "post_author" : "admin1",
       "post_thumbnail" : [
-        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png"
+        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/400_400_20200730_1596042321_banner-1-300x233.jpg"
       ]
     },
     {
       "post_id": 3,
-      "post_category_id": "catePo1",
+      "post_category_id": 1,
       "post_category_name": "Tin Tức",
-      "post_name" : "Váy hoa nhí cơn sốt mùa hè của mọi cô gái",
+      "post_name" : "10 Set quần áo nâng tầm thời trang mặc nhà",
       "post_description" : "Đầm suông cổ tròn “2099 Valentino",
       "post_content" : "pót còn ten",
       "post_author" : "admin1",
       "post_thumbnail" : [
-        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png"
+        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/400_400_20200602_1591106563_vayt-he-wweb-300x233.jpg"
       ]
     },
     {
       "post_id": 4,
-      "post_category_id": "catePo1",
+      "post_category_id": 1,
       "post_category_name": "Tin Tức",
-      "post_name" : "Váy hoa nhí cơn sốt mùa hè của mọi cô gái",
+      "post_name" : "4 kiểu váy nhẹ tênh và xinh xắn hết phần thiên hạ",
       "post_description" : "Đầm suông cổ tròn “2099 Valentino",
-      "post_content" : "pót còn ten",
+      "post_content" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
       "post_author" : "admin1",
       "post_thumbnail" : [
-        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png"
+        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/400_400_20200519_1589905694_vayt-he-wweb-300x233.jpg"
       ]
     },
     {
       "post_id": 5,
-      "post_category_id": "catePo1",
+      "post_category_id": 1,
       "post_category_name": "Tin Tức",
-      "post_name" : "Váy hoa nhí cơn sốt mùa hè của mọi cô gái",
+      "post_name" : "TƯNG BỪNG TAN DỊCH CÙNG NHAU LIÊN HOAN SALE LỄ 30-04",
       "post_description" : "Đầm suông cổ tròn “2099 Valentino",
-      "post_content" : "pót còn ten",
+      "post_content" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
       "post_author" : "admin1",
       "post_thumbnail" : [
-        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png"
+        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200430_1588259767_c9c486a2a1a85bf602b9-300x133.jpg"
       ]
     },
     {
       "post_id": 6,
-      "post_category_id": "catePo1",
+      "post_category_id": 1,
       "post_category_name": "Tin Tức",
-      "post_name" : "Váy hoa nhí cơn sốt mùa hè của mọi cô gái",
+      "post_name" : "Cách phối quần jean áo thun nữ cho một xu hướng hiện đại nhất",
       "post_description" : "Đầm suông cổ tròn “2099 Valentino",
-      "post_content" : "pót còn ten",
+      "post_content" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
       "post_author" : "admin1",
       "post_thumbnail" : [
-        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/20200805_1596564496_dam-suong-co-tron-2099-valentino-1-247x296.png"
+        "http://mka.giaodienwebmau.com/wp-content/uploads/2020/09/400_400_20200415_1586892816_ao-phong-wweb-300x233.jpg"
       ]
     }
   ],
 
   "category_list" : [
     {
-      "post_category_id" : "catePo1",
+      "post_category_id" : 1,
       "post_category_name" : "Tin Tức",
       "totail_post_in_category" : "99",
       "author_category" : "admin1"

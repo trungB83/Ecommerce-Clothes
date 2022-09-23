@@ -1,6 +1,6 @@
 import React from "react";
-import imgPost from "../assets/images/20190225_1551097166_mega-6208-3-247x296.jpg";
 import '../assets/styles/list-post.css';
+import { Link } from 'react-router-dom';
 
 
 const PostList = (props) => {
@@ -11,13 +11,13 @@ const PostList = (props) => {
       <div className="list-post">
         <div className="container">
           <div className="row">
-          {props.posts.map((post, index)=> (
+          {props.posts.map((post)=> (
             <div className="col-lg-12" key={post.post_id}>
                 <div className="main-list">
                   <div className="box-list">
-                    <div className="box-img">
-                      <img className="img" src={imgPost} alt="" />
-                    </div>
+                    <Link to={`/post-detail/${post.post_id}`} className="box-img">
+                      <img className="img" src={post.post_thumbnail} alt="" />
+                    </Link>
                     <div className="box-text">
                       <div className="title">
                         <h3 className="title">{post.post_name}</h3>

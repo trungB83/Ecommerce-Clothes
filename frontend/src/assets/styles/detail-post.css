@@ -220,10 +220,10 @@ body {
     color:rgb(59, 37, 37);
 }
 
-.list-post .main-list {
-
+.imgWrapper {
+    display: flex;
+    justify-content: center;
 }
-
 
 
 

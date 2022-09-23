@@ -9,6 +9,9 @@ import {useParams} from "react-router-dom";
 const PostDetail = () => {
   const [post, setPost] = useState({});
   const params = useParams();
+  const [categoryProducts, setCategoryProducts] = useState([]);
+  const [categoryPosts, setCategoryPost] = useState([]);
+
   console.log(params);
   useEffect(() => {
     const getPosts = async () => {
@@ -18,6 +21,9 @@ const PostDetail = () => {
       const detailPost = postRes.data.list.find(prod => prod.post_id == params.postId )
       console.log("123" , detailPost);
       setPost(detailPost);
+      let productRes = await axios.get("http://localhost:3003/products");
+      setCategoryPost(postRes.data.category_list);
+      setCategoryProducts(productRes.data.category_list);
     };
     if(params.postId){
       getPosts();
@@ -26,7 +32,7 @@ const PostDetail = () => {
 
   return (
     <div>
-        <Header />        
+        <Header category_list={categoryProducts} categoryPosts={categoryPosts}/>        
         <PostMain post={post}/>
         <Footer />
     </div>

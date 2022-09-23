@@ -77,17 +77,18 @@ const Header = (props) => {
                   <li className="nav-link">
                     <Link to="/">Trang chủ</Link>
                   </li>
-                  <li className="nav-link">
-                    <Link to="#">Giới thiệu</Link>
-                  </li>
-                  {/* {props.category_list.map((category_list,index)=> (
-                    <li className="nav-link" key={category_list.product_category_id}>
-                    <Link to="">{category_list.product_category_name}</Link>
-                  </li>
-                  ))} */}
-                  <li className="nav-link">
-                    <Link to="/posts/">Tin tức</Link>
-                  </li>
+
+                  {props.category_list && props.category_list.map((category_list,index)=> (
+                    <span className="nav-link" key={index}>
+                      <Link to={`/product-category/${category_list.product_category_id}`}>{category_list.product_category_name}</Link>
+                    </span>
+                  ))}
+                  {props.categoryPosts && props.categoryPosts.map((categoryPosts)=>(
+                    <li className="nav-link">
+                      <Link to={`/post-category/${categoryPosts.post_category_id}`}>Tin Tức</Link>
+                    </li>
+                  ))}
+                  
                   <li className="nav-link">
                     <Link to="/contact/">Liên hệ</Link>
                   </li>

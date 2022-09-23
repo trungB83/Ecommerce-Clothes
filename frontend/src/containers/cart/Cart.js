@@ -1,19 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import "../../assets/styles/cart.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Cart = () => {
-  const [cart,setCart] = useState([]);
+  const [categoryProducts, setCategoryProducts] = useState([]);
+  const [categoryPosts, setCategoryPost] = useState([]);
 
-  const handleClick = (item) =>{
-    console.log("item");
-  };
+  useEffect(() => {
+    const getNav = async () => {
+      let postRes = await axios.get("http://localhost:3003/posts");
+      setCategoryPost(postRes.data.category_list);
+      let productRes = await axios.get("http://localhost:3003/products");
+      setCategoryProducts(productRes.data.category_list);
+    };
+    getNav();
+  }, []);
 
   return (
     <>
-      <Header />
+      <Header category_list={categoryProducts} categoryPosts={categoryPosts}/>
       <div className="cart">
         <div className="container">
           <div className="row">
@@ -34,9 +42,13 @@ const Cart = () => {
                     </div>
                   </div>
                   <div className="col quatity">
-                    <button onChange={handleClick(+1)} className="btn-change ">+</button>
+                    <button  className="btn-change ">
+                      +
+                    </button>
                     <p>1</p>
-                    <button onChange={handleClick(-1)} className="btn-change">-</button>
+                    <button  className="btn-change">
+                      -
+                    </button>
                   </div>
                   <div className="col price">
                     425.000đ <span className="close"></span>
@@ -48,18 +60,17 @@ const Cart = () => {
               </div>
 
               <div className="back-to-shop">
-                <Link to="/" className="back"><i class="fa fa-angle-left" aria-hidden="true"></i> TIẾP TỤC XEM SẢN PHẨM</Link>
+                <Link to="/" className="back">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i> TIẾP TỤC
+                  XEM SẢN PHẨM
+                </Link>
               </div>
             </div>
 
-
-            
             <div className="col-lg-4 ">
               <div className="box-summary">
                 <div className="title-summary">
-                  <h5>
-                    Cộng giỏ hàng
-                  </h5>
+                  <h5>Cộng giỏ hàng</h5>
                 </div>
                 <hr />
                 <div className="row">
@@ -81,7 +92,6 @@ const Cart = () => {
                 <div className="box-button">
                   <button className="btn-submit">Đặt đơn hàng</button>
                 </div>
-                
               </div>
             </div>
           </div>
