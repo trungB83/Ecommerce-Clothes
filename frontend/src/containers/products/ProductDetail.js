@@ -14,7 +14,7 @@ const ProductDetail = () => {
       let productRes = await axios.get("http://localhost:3003/products");
       setProduct(productRes.data.list);
       console.log("product respon", productRes.data);
-      const detailProduct = productRes.data.list.find(prod => prod.prod_id == params.productId )
+      const detailProduct = productRes.data.list.find(prod => prod.prod_id === params.productId )
       console.log("123" , detailProduct);
       setProduct(detailProduct);
     };
