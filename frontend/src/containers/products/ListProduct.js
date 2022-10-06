@@ -15,10 +15,10 @@ const ListProduct = () => {
   useEffect(() => {
     const getProducts = async () => {
       let productRes = await axios.get("http://localhost:3003/products");
-      const currentProducts = productRes.data.list.filter(item => item.prod_category_id == params.productCategoryId);
+      const currentProducts = productRes.data.list.filter(item => item.prod_category_id === params.productCategoryId);
       setProducts(currentProducts);
       setCategoryProducts(productRes.data.category_list);
-      const currentCate = productRes.data.category_list.find(item => item.product_category_id == params.productCategoryId);
+      const currentCate = productRes.data.category_list.find(item => item.product_category_id === params.productCategoryId);
       setCurrentCategory(currentCate);
       console.log("product respon", productRes.data);
       let postRes = await axios.get("http://localhost:3003/posts");

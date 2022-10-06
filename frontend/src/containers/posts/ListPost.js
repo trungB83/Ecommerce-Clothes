@@ -15,11 +15,11 @@ const ListPost = () => {
   useEffect(() => {
     const getPosts = async () => {
       let postRes = await axios.get("http://localhost:3003/posts");
-      const currentPosts = postRes.data.list.filter(item => item.post_category_id == params.postCategoryId);
-      console.log("22", postRes.data.list.filter(item => item.post_category_id == params.postCategoryId));
+      const currentPosts = postRes.data.list.filter(item => item.post_category_id === params.postCategoryId);
+      console.log("22", postRes.data.list.filter(item => item.post_category_id === params.postCategoryId));
       setPosts(currentPosts);
       setCategoryPost(postRes.data.category_list);
-      const currentCate = postRes.data.category_list.find(item => item.post_category_id == params.postCategoryId);
+      const currentCate = postRes.data.category_list.find(item => item.post_category_id === params.postCategoryId);
       setCurrentCategory(currentCate);
       let productRes = await axios.get("http://localhost:3003/products");
       setCategoryProducts(productRes.data.category_list);
