@@ -183,10 +183,14 @@
     padding-right: 10px;
 }
 
-.list-post .main-list .box-list .box-text {
-    
+.list-post .main-list .box-list .box-text .title{
+    color: #3a3a3a;
 }
 
+.list-post .main-list .box-list .box-text .title:hover {
+    transition: all 0.4s;
+    color: #0d6efd;
+}
 
 
 

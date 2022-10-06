@@ -10,8 +10,8 @@ import ListProduct from "./containers/products/ListProduct";
 import Cart from "./containers/cart/Cart";
 import Login from "./containers/login/Login";
 import Contact from "./containers/contact/Contact";
-import LogRocket from 'logrocket';
-LogRocket.init('kf4f9f/ecommerceshopcloths');
+import LogRocket from "logrocket";
+LogRocket.init("kf4f9f/ecommerceshopcloths");
 const App = () => {
   return (
     <Router>
@@ -35,16 +35,11 @@ const App = () => {
           <Cart />
         </Route>
         <Route path="/login/">
-          <Login/>
+          <Login />
         </Route>
         <Route path="/contact/">
-          <Contact/>
+          <Contact />
         </Route>
-        
-        
-
-
-        
       </Switch>
     </Router>
   );

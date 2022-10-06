@@ -52,26 +52,26 @@ const PostList = (props) => {
           <div className="row main-products">
             {props.products.map((product, index) => (
               <div
-                className="col-lg-2 col-md-4 col-sm-6 col-xs-6"
+                className="col-lg-3 col-md-4 col-sm-6 col-xs-6"
                 key={product.prod_id}
               >
-                <div className="product-small">
+                <Link to={`/product-detail/${product.prod_id}`} className="product-small">
                   <div className="box-image">
-                    <Link to={`/product-detail/${product.prod_id}`}>
+                    
                       <img
                         className="thumbnail"
                         src={product.prod_thumbnail}
                         alt="thumbnail"
                       />
-                    </Link>
+                    
                   </div>
                   <div className="box-text">
                     <h5 className="title-product">
-                      <Link to={`/product-detail/${product.prod_id}`}>{product.prod_name}</Link>
+                      {product.prod_name}
                     </h5>
                     <p className="price-product">{product.prod_price}</p>
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
