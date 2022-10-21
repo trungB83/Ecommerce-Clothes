@@ -7,22 +7,20 @@ import { useParams } from 'react-router-dom';
 
 const ListProduct = () => {
   const [products, setProducts] = useState([]);
-  const [categoryProducts, setCategoryProducts] = useState([]);
-  const [categoryPosts, setCategoryPost] = useState([]);
   const [currentCategory, setCurrentCategory] = useState({});
   const params = useParams();
 
   useEffect(() => {
     const getProducts = async () => {
       let productRes = await axios.get("http://localhost:3003/products");
-      const currentProducts = productRes.data.list.filter(item => item.prod_category_id === params.productCategoryId);
+      console.log("product respon", productRes);
+      const curProd= productRes.data.list;
+      console.log("curProd", curProd);
+      const currentProducts = curProd.filter(item => item.prod_category_id == params.productCategoryId);
       setProducts(currentProducts);
-      setCategoryProducts(productRes.data.category_list);
-      const currentCate = productRes.data.category_list.find(item => item.product_category_id === params.productCategoryId);
+      console.log("products after", products);
+      const currentCate = productRes.data.category_list.find(item => item.product_category_id == params.productCategoryId);
       setCurrentCategory(currentCate);
-      console.log("product respon", productRes.data);
-      let postRes = await axios.get("http://localhost:3003/posts");
-      setCategoryPost(postRes.data.category_list);
     };
     if (params.productCategoryId) {
       getProducts();
@@ -30,12 +28,12 @@ const ListProduct = () => {
 
     
   }, [params]);
-  console.log(currentCategory);
+  console.log("currentCategory", currentCategory);
 
   
   return (
     <>
-      <Header category_list={categoryProducts} categoryPosts={categoryPosts}/>
+      <Header/>
       <ProductList products={products} currentCategory={currentCategory}/>
       <Footer />
     </>

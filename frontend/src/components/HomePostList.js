@@ -11,7 +11,7 @@ const HomePostList = (props) => {
             {props.posts.map((post, index) => (
               <div
                 className="col-lg-2 col-md-4 col-sm-6 col-xs-6"
-                key={post.post_id}
+                key={index}
               >
                 <Link
                   to={`/post-detail/${post.post_id}`}

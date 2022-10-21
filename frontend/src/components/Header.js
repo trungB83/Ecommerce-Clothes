@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import bannerTop from "../assets/images/deal_top.jpg";
 import logo from "../assets/images/02_logo.png";
 import imgWrapper from "../assets/images/shipping-icon-v.png";
 import { Link } from "react-router-dom";
+import { API_LOCAL_URL } from "../config";
+import axios from "axios";
+import {
+  ShoppingCartOutlined,
+  PhoneOutlined,
+  SearchOutlined,
+} from "@ant-design/icons";
+const Header = () => {
+  const [categoryProducts, setCategoryProducts] = useState([]);
+  const [categoryPosts, setCategoryPost] = useState([]);
 
-const Header = (props) => {
+  useEffect(() => {
+    const getCategories = async () => {
+      let prodRes = await axios.get(`${API_LOCAL_URL}products`);
+      setCategoryProducts(prodRes.data.category_list);
+      let postRes = await axios.get(`${API_LOCAL_URL}posts`);
+      setCategoryPost(postRes.data.category_list);
+    };
+    getCategories();
+  }, []);
   return (
     <div>
       <div className="header">
@@ -41,7 +59,7 @@ const Header = (props) => {
                       id="search-bar"
                     />
                     <button className="submit-search">
-                      <i className="fa fa-search" aria-hidden="true"></i>
+                      <SearchOutlined />
                     </button>
                   </div>
                 </div>
@@ -50,13 +68,13 @@ const Header = (props) => {
                 <div className="wrapper-cart">
                   <div className="wrapper-hotline">
                     <Link to="#" className="btn-hotline">
-                      <i className="fa fa-phone" aria-hidden="true"></i>{" "}
+                      <PhoneOutlined />
                       098989898
                     </Link>
                   </div>
                   <div className="wrapper-icon">
                     <Link to="/cart/" className="cart">
-                      <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+                      <ShoppingCartOutlined />
                     </Link>
                   </div>
                 </div>
@@ -78,17 +96,27 @@ const Header = (props) => {
                     <Link to="/">Trang chủ</Link>
                   </li>
 
-                  {props.category_list && props.category_list.map((category_list,index)=> (
-                    <span className="nav-link" key={index}>
-                      <Link to={`/product-category/${category_list.product_category_id}`}>{category_list.product_category_name}</Link>
-                    </span>
-                  ))}
-                  {props.categoryPosts && props.categoryPosts.map((categoryPosts)=>(
-                    <li className="nav-link">
-                      <Link to={`/post-category/${categoryPosts.post_category_id}`}>Tin Tức</Link>
-                    </li>
-                  ))}
-                  
+                  {categoryProducts &&
+                    categoryProducts.map((categoryProducts, index) => (
+                      <span className="nav-link" key={index}>
+                        <Link
+                          to={`/product-category/${categoryProducts.product_category_id}`}
+                        >
+                          {categoryProducts.product_category_name}
+                        </Link>
+                      </span>
+                    ))}
+                  {categoryPosts &&
+                    categoryPosts.map((categoryPosts, index) => (
+                      <li className="nav-link" key={index}>
+                        <Link
+                          to={`/post-category/${categoryPosts.post_category_id}`}
+                        >
+                          Tin Tức
+                        </Link>
+                      </li>
+                    ))}
+
                   <li className="nav-link">
                     <Link to="/contact/">Liên hệ</Link>
                   </li>

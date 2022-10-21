@@ -1,6 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "./App.css";
+import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./assets/styles/style.css";
 import Home from "./containers/home/Home";
 import ListPost from "./containers/posts/ListPost";
@@ -10,38 +10,31 @@ import ListProduct from "./containers/products/ListProduct";
 import Cart from "./containers/cart/Cart";
 import Login from "./containers/login/Login";
 import Contact from "./containers/contact/Contact";
-import LogRocket from "logrocket";
-LogRocket.init("kf4f9f/ecommerceshopcloths");
+import Register from "./containers/register/Register";
 const App = () => {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-        <Route path="/post-category/:postCategoryId">
-          <ListPost />
-        </Route>
-        <Route path="/post-detail/:postId">
-          <PostDetail />
-        </Route>
-        <Route path="/product-category/:productCategoryId">
-          <ListProduct />
-        </Route>
-        <Route path="/product-detail/:productId">
-          <ProductDetail />
-        </Route>
-        <Route path="/cart/">
-          <Cart />
-        </Route>
-        <Route path="/login/">
-          <Login />
-        </Route>
-        <Route path="/contact/">
-          <Contact />
-        </Route>
-      </Switch>
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route
+          path="/post-category/:postCategoryId"
+          element={<ListPost />}
+        ></Route>
+        <Route path="/post-detail/:postId" element={<PostDetail />}></Route>
+        <Route
+          path="/product-category/:productCategoryId"
+          element={<ListProduct />}
+        ></Route>
+        <Route
+          path="/product-detail/:productId"
+          element={<ProductDetail />}
+        ></Route>
+        <Route path="/cart/" element={<Cart />}></Route>
+        <Route path="/login/" element={<Login />}></Route>
+        <Route path="/register/" element={<Register />}></Route>
+        <Route path="/contact/" element={<Contact />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 

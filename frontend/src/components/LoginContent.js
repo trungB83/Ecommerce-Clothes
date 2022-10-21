@@ -1,61 +1,64 @@
-import "../assets/styles/registerContent.scss"
+// import "../assets/styles/loginContent.scss"
 import { Button, Checkbox, Form, Input, notification } from "antd"
 import React, { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import { statusNotification } from "../core-authent/constants/constant"
+import { auth, statusNotification } from "../core-authent/constants/constant"
 import { pathApi } from "../core-authent/constants/pathApi"
-import routes from "../core-authent/constants/routes"
 import { renderContentNoti } from "../core-authent/utils/utils"
 import { httpClient } from "../axiosClient"
+import { setLocal, setObjectLocal } from "../core-authent/utils/localStorage"
+import routes from '../core-authent/constants/routes';
 
-function RegisterContent() {
+function LoginContent() {
   const [isLoading, setIsLoading] = useState(false)
-
   const navigate = useNavigate()
 
   const onFinish = values => {
-    if (
-      values &&
-      values.ten_tai_khoan &&
-      values.ten_nhan_vien &&
-      values.email &&
-      values.mat_khau &&
-      values.xac_nhan_mat_khau
-    ) {
+    console.log("onFinish", values);
+    if (values && values.ten_tai_khoan && values.mat_khau) {
       const body = {
         ten_tai_khoan: values.ten_tai_khoan.trim(),
-        ten_nhan_vien: values.ten_nhan_vien.trim(),
-        email: values.email.trim(),
-        mat_khau: values.mat_khau.trim(),
-        xac_nhan_mat_khau: values.xac_nhan_mat_khau.trim()
+        mat_khau: values.mat_khau.trim()
       }
-      handleRegister(body)
+      handleLogin(body)
     } else {
       return
     }
   }
 
+
+
   const onFinishFailed = errorInfo => {}
 
-  const handleRegister = async body => {
+  const openNotification = content => {
+    notification.open({
+      message: content.message,
+      description: content.description,
+      icon: content.icon
+    })
+  }
+
+  const handleLogin = async body => {
     setIsLoading(true)
     try {
-      const response = await httpClient.post(pathApi.auth.regiter, body)
+      const response = await httpClient.post("http://localhost:3003/users", body)
+      console.log("response", response);
       if (
         response &&
         response.data &&
-        response.data.token &&
         response.data.data &&
         response.data.success
       ) {
         setIsLoading(false)
-        navigate(routes.login)
+        setLocal(auth.TOKEN, response.data.token)
+        setObjectLocal(auth.USER_INFO, response.data.data)
+        navigate(routes.dashboard)
         notification.success({
-          ...renderContentNoti(statusNotification.register.REGISTER_SUCCESS)
+          ...renderContentNoti(statusNotification.login.LOGIN_SUCCESS)
         })
       } else {
         setIsLoading(false)
-        notification.success({ ...renderContentNoti() })
+        notification.error({ ...renderContentNoti() })
       }
     } catch (error) {
       setIsLoading(false)
@@ -64,13 +67,12 @@ function RegisterContent() {
         error.response &&
         error.response.data &&
         error.response.data.error &&
-        !error.response.data.success &&
         error.response.status !== 500 &&
         error.response.status !== 401
       ) {
-        notification.success({
+        notification.error({
           ...renderContentNoti(
-            statusNotification.register.REGISTER_FAIL,
+            statusNotification.login.LOGIN_FAIL,
             error.response.data.error
           )
         })
@@ -87,10 +89,10 @@ function RegisterContent() {
         initialValues={{ remember: true }}
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
-        autoComplete="on"
+        autoComplete="off"
         className="formLogin"
       >
-        <h1 className="formLogin__title">Đăng ký</h1>
+        <h1 className="formLogin__title">Đăng nhập</h1>
         <Form.Item
           name="ten_tai_khoan"
           rules={[
@@ -104,32 +106,6 @@ function RegisterContent() {
         </Form.Item>
 
         <Form.Item
-          name="ten_nhan_vien"
-          rules={[
-            {
-              required: true,
-              message: "Vui lòng nhập tên nhân viên!"
-            }
-          ]}
-        >
-          <Input placeholder="Tên nhân viên " />
-        </Form.Item>
-        <Form.Item
-          name="email"
-          rules={[
-            {
-              type: "email",
-              message: "Vui lòng nhập đúng định dạng email!"
-            },
-            {
-              required: true,
-              message: "Vui lòng nhập Email!"
-            }
-          ]}
-        >
-          <Input placeholder="Email " />
-        </Form.Item>
-        <Form.Item
           name="mat_khau"
           rules={[
             {
@@ -140,26 +116,7 @@ function RegisterContent() {
         >
           <Input.Password placeholder="Mật khẩu" />
         </Form.Item>
-        <Form.Item
-          name="xac_nhan_mat_khau"
-          dependencies={["password"]}
-          rules={[
-            {
-              required: true,
-              message: "Vui lòng nhập mật khẩu!"
-            },
-            ({ getFieldValue }) => ({
-              validator(_, value) {
-                if (!value || getFieldValue("mat_khau") === value) {
-                  return Promise.resolve()
-                }
-                return Promise.reject(new Error("Không trùng khớp mật khẩu!"))
-              }
-            })
-          ]}
-        >
-          <Input.Password placeholder="Xác nhận mật khẩu" />
-        </Form.Item>
+
         <Form.Item
           valuePropName="checked"
           wrapperCol={{
@@ -187,7 +144,7 @@ function RegisterContent() {
             loading={isLoading}
             block
           >
-            Đăng ký
+            Đăng nhập
           </Button>
         </Form.Item>
 
@@ -197,12 +154,12 @@ function RegisterContent() {
             span: 16
           }}
         >
-          <Button htmlType="submit" loading={isLoading} block>
-            <Link to={routes.login}>Đăng nhập</Link>
+          <Button htmlType="submit">
+            <Link to={routes.register}>Đăng ký</Link>
           </Button>
         </Form.Item>
       </Form>
     </div>
   )
 }
-export default RegisterContent
+export default LoginContent

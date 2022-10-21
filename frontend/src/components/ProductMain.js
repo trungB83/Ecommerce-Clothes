@@ -37,7 +37,7 @@ const ProductMain = (props) => {
                 <div className="col-lg-6">
                   <div className="wrapper-text">
                     <h1 className="title-product">
-                      {props.product.prod_name}
+                      {props.product.prod_title} | title
                     </h1>
                     <p className="price-product">{props.product.prod_price}</p>
                     <div className="short-decription-product">

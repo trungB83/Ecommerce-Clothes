@@ -44,7 +44,7 @@ const HomeProductList = (props) => {
               {props.products.map((product, index) => (
                 <div
                   className="col-lg-2 col-md-4 col-sm-6 col-xs-6 "
-                  key={product.prod_id}
+                  key={index}
                 >
                   <Link
                     to={`/product-detail/${product.prod_id}`}
