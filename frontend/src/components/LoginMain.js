@@ -16,7 +16,7 @@ const LoginMain = () => {
               <label>Password</label>
             </div>
             <div className="button-box">
-              <button class="btn-submit">Login</button>
+              <button className="btn-submit">Login</button>
             </div>
           </form>
         </div>

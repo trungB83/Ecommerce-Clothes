@@ -3,25 +3,12 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import "../../assets/styles/cart.css";
 import { Link } from "react-router-dom";
-import axios from "axios";
 
-const Cart = () => {
-  const [categoryProducts, setCategoryProducts] = useState([]);
-  const [categoryPosts, setCategoryPost] = useState([]);
-
-  useEffect(() => {
-    const getNav = async () => {
-      let postRes = await axios.get("http://localhost:3003/posts");
-      setCategoryPost(postRes.data.category_list);
-      let productRes = await axios.get("http://localhost:3003/products");
-      setCategoryProducts(productRes.data.category_list);
-    };
-    getNav();
-  }, []);
-
+const Cart = (props) => {
+  console.log("props", props);
   return (
     <>
-      <Header category_list={categoryProducts} categoryPosts={categoryPosts}/>
+      <Header />
       <div className="cart">
         <div className="container">
           <div className="row">
@@ -32,6 +19,7 @@ const Cart = () => {
             </div>
             <div className="col-lg-8">
               <div className="box-cart">
+              {props.cartItem.length === 0 && <div>Giỏ hàng trống</div>}
                 <div className="row main-product">
                   <div className="col-2 image">
                     <img className="img-fluid" src="" alt="thumbnail product" />
@@ -42,13 +30,9 @@ const Cart = () => {
                     </div>
                   </div>
                   <div className="col quatity">
-                    <button  className="btn-change ">
-                      +
-                    </button>
+                    <button className="btn-change ">+</button>
                     <p>1</p>
-                    <button  className="btn-change">
-                      -
-                    </button>
+                    <button className="btn-change">-</button>
                   </div>
                   <div className="col price">
                     425.000đ <span className="close"></span>
@@ -61,8 +45,8 @@ const Cart = () => {
 
               <div className="back-to-shop">
                 <Link to="/" className="back">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i> TIẾP TỤC
-                  XEM SẢN PHẨM
+                  <i className="fa fa-angle-left" aria-hidden="true"></i> TIẾP
+                  TỤC XEM SẢN PHẨM
                 </Link>
               </div>
             </div>

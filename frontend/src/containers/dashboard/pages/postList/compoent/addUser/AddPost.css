@@ -1,0 +1,57 @@
+.first-row {
+  margin-bottom: 1rem;
+}
+.first-row h1 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #b2afaf;
+}
+.first-row .pageAddUser_toList {
+  color: #fff;
+  background: #2fa2c1;
+  border-color: #5aa9d0;
+  padding: 0 5rem;
+}
+.ProfileDetail .ProfileDetail_left .ProfileDetail_left-inner {
+  background-color: white;
+  min-height: 300px;
+  padding: 1rem;
+}
+.ProfileDetail .ProfileDetail_left .ProfileDetail_left-inner .ant-form-item .ant-form-item-row {
+  flex-direction: column;
+}
+.ProfileDetail .ProfileDetail_left .ProfileDetail_left-inner .ant-form-item .ant-form-item-row .ant-form-item-label {
+  text-align: left;
+}
+.ProfileDetail .ProfileDetail_right .ProfileDetail_right-inner {
+  min-height: 300px;
+}
+.ProfileDetail .ProfileDetail_right .ProfileDetail_right-inner .ProfileDetail_right-item {
+  background: white;
+  margin: 0 5px 15px 5px;
+  min-height: 100px;
+}
+.ProfileDetail .ProfileDetail_right .ProfileDetail_right-inner .ProfileDetail_right-item .ProfileDetail_right-item__title {
+  text-align: center;
+  padding: 4px 0;
+  border: 1px solid #ccd0d4;
+}
+.ProfileDetail .ProfileDetail_right .ProfileDetail_right-inner .ProfileDetail_right-item .ProfileDetail_right-item__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.ProfileDetail .ProfileDetail_right .ProfileDetail_right-inner .ProfileDetail_right-item .ProfileDetail_right-item__content .btn-control {
+  padding: 4px 15%;
+}
+.ProfileDetail .ProfileDetail_right .ProfileDetail_right-inner .ProfileDetail_right-item .ProfileDetail_right-item__content .red-6 {
+  background: #ff4d4f;
+  color: white;
+}
+.ProfileDetail .ProfileDetail_right .ProfileDetail_right-inner .ProfileDetail_right-item .ProfileDetail_right-item__content .green-6 {
+  background-color: #2fa2c1;
+  color: white;
+}
+.ProfileDetail .ProfileDetail_right .ProfileDetail_right-inner .ProfileDetail_right-item .ProfileDetail_right-item__content .ant-picker {
+  width: 100%;
+}

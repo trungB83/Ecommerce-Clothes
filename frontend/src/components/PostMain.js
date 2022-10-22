@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "../assets/styles/detail-post.css";
 
 const PostMain = (props) => {
-  console.log(props);
   return (
     <div>
       <div className="post">

@@ -4,7 +4,6 @@ import "../assets/styles/detail-product.css"
 
 
 const ProductMain = (props) => {
-  console.log(props);
   return (
     <div>
       <div className="main-content">
@@ -14,11 +13,11 @@ const ProductMain = (props) => {
               <div className="wrapper-navigation">
                 <ul className="nav">
                   <li className="nav-link">
-                    <Link to="">Trang Chủ</Link>
+                    <Link to="/">Trang Chủ</Link>
                   </li>
                   /
                   <li className="nav-link">
-                    <Link to="">Váy Đầm</Link>
+                    <Link to="">Đầm</Link>
                   </li>
                 </ul>
               </div>
@@ -37,7 +36,7 @@ const ProductMain = (props) => {
                 <div className="col-lg-6">
                   <div className="wrapper-text">
                     <h1 className="title-product">
-                      {props.product.prod_title} | title
+                      {props.product.prod_name}
                     </h1>
                     <p className="price-product">{props.product.prod_price}</p>
                     <div className="short-decription-product">

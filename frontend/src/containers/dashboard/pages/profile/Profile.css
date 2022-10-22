@@ -1,0 +1,62 @@
+.pageProfileDetail h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.pageProfileDetail .ProfileDetail-Left {
+  border: 1px solid #f1f1f1;
+}
+.pageProfileDetail .ProfileDetail-Left .ProfileDetail-Left-inner {
+  background-color: white;
+}
+.pageProfileDetail .ProfileDetail-Left .ProfileDetail-Left-inner h2 {
+  text-align: center;
+  border: 1px solid #f1f1f1;
+}
+.pageProfileDetail .ProfileDetail-Left .ProfileDetail-Left-inner .ProfileDetail-avatar {
+  margin: 5px;
+  min-height: 300px;
+  padding: 20px 10px;
+}
+.pageProfileDetail .ProfileDetail-Left .ProfileDetail-Left-inner .ProfileDetail-avatar .user-avatar {
+  margin: auto;
+  display: block;
+}
+.pageProfileDetail .ProfileDetail-Left .ProfileDetail-Left-inner .ProfileDetail-name {
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-align: center;
+  padding: 10px 0;
+}
+.pageProfileDetail .ProfileDetail-Left .ProfileDetail-Left-inner .ProfileDetail-editUser {
+  color: #fff;
+  border-color: #ff4d4f;
+  background: #ff4d4f;
+  text-shadow: 0 -1px 0 #000;
+  box-shadow: 0 2px 0 #000;
+  height: 32px;
+  padding: 4px 16px;
+  font-size: 14px;
+  border-radius: 32px;
+  width: 90%;
+  text-align: center;
+}
+.pageProfileDetail .ProfileDetail-Left .ProfileDetail-Left-inner .Navto-addUser {
+  display: block;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.pageProfileDetail .ProfileDetail-right .ProfileDetail-text {
+  background-color: white;
+  margin: 5px;
+  min-height: 300px;
+  padding: 10px;
+  font-size: 18px;
+}
+.pageProfileDetail .ProfileDetail-right .ProfileDetail-permision__data, .pageProfileDetail .ProfileDetail-right .ProfileDetail-gender__data, .pageProfileDetail .ProfileDetail-right .ProfileDetail-phone__data, .pageProfileDetail .ProfileDetail-right .ProfileDetail-email__data, .pageProfileDetail .ProfileDetail-right .ProfileDetail-address__data, .pageProfileDetail .ProfileDetail-right .ProfileDetail-date__data {
+  padding-left: 30px;
+}
+.pageProfileDetail .ProfileDetail-right .ProfileDetail-permision, .pageProfileDetail .ProfileDetail-right .ProfileDetail-gender, .pageProfileDetail .ProfileDetail-right .ProfileDetail-phone, .pageProfileDetail .ProfileDetail-right .ProfileDetail-email, .pageProfileDetail .ProfileDetail-right .ProfileDetail-address, .pageProfileDetail .ProfileDetail-right .ProfileDetail-date {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #f1f1f1;
+}

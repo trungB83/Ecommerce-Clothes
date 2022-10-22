@@ -13,12 +13,9 @@ const ListProduct = () => {
   useEffect(() => {
     const getProducts = async () => {
       let productRes = await axios.get("http://localhost:3003/products");
-      console.log("product respon", productRes);
       const curProd= productRes.data.list;
-      console.log("curProd", curProd);
       const currentProducts = curProd.filter(item => item.prod_category_id == params.productCategoryId);
       setProducts(currentProducts);
-      console.log("products after", products);
       const currentCate = productRes.data.category_list.find(item => item.product_category_id == params.productCategoryId);
       setCurrentCategory(currentCate);
     };
@@ -28,7 +25,6 @@ const ListProduct = () => {
 
     
   }, [params]);
-  console.log("currentCategory", currentCategory);
 
   
   return (

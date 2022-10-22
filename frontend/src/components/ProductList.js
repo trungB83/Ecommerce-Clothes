@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/styles/list-product.css";
 import { Link } from "react-router-dom";
 
-const PostList = (props) => {
-  console.log(props);
+const ProductList = (props) => {
+  const [cart, setCart] = useState([]);
+
+  const handleAddProduct = (item) => {
+    setCart([...cart,item])
+  };
   return (
     <>
       <div className="list-product-main">
@@ -11,7 +15,9 @@ const PostList = (props) => {
           <div className="row">
             <div className="col-7">
               <div className="wrapper-head-left">
-                <h1 className="title-page">{props.currentCategory.product_category_name}</h1>
+                <h1 className="title-page">
+                  {props.currentCategory.product_category_name}
+                </h1>
                 <div className="navigation">
                   <ul className="nav-main">
                     <li className="nav-item">
@@ -19,7 +25,9 @@ const PostList = (props) => {
                     </li>
                     /
                     <li className="nav-item">
-                      <Link to="#">{props.currentCategory.product_category_name}</Link>
+                      <Link to="#">
+                        {props.currentCategory.product_category_name}
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -28,11 +36,11 @@ const PostList = (props) => {
             <div className="col-5 wrapper-head-right">
               <div className="wrapper-head-right">
                 <div className="show-number-item">
-                  <p>Hiển thị tất cả 11 kết quả</p>
+                  <p>Hiển thị tất cả {props.products.length} kết quả</p>
                 </div>
                 <form method="get" className="form-sort">
                   <select className="sort">
-                    <option value="normal" selected="selected">
+                    <option value="normal" defaultValue="selected">
                       Thứ tự mặc định
                     </option>
                     <option value="popularity">
@@ -51,27 +59,26 @@ const PostList = (props) => {
           </div>
           <div className="row main-products">
             {props.products.map((product, index) => (
-              <div
-                className="col-lg-3 col-md-4 col-sm-6 col-xs-6"
-                key={product.prod_id}
-              >
-                <Link to={`/product-detail/${product.prod_id}`} className="product-small">
+              <div className="col-lg-3 col-md-4 col-sm-6 col-xs-6" key={index}>
+                <Link
+                  to={`/product-detail/${product.prod_id}`}
+                  className="product-small"
+                >
                   <div className="box-image">
-                    
-                      <img
-                        className="thumbnail"
-                        src={product.prod_thumbnail}
-                        alt="thumbnail"
-                      />
-                    
+                    <img
+                      className="thumbnail"
+                      src={product.prod_thumbnail}
+                      alt="thumbnail"
+                    />
                   </div>
                   <div className="box-text">
-                    <h5 className="title-product">
-                      {product.prod_name}
-                    </h5>
+                    <h5 className="title-product">{product.prod_name}</h5>
                     <p className="price-product">{product.prod_price}</p>
                   </div>
                 </Link>
+                <button type="primary" onClick={() => handleAddProduct(product)}>
+                  Thêm vào giỏ hàng
+                </button>
               </div>
             ))}
           </div>
@@ -81,4 +88,4 @@ const PostList = (props) => {
   );
 };
 
-export default PostList;
+export default ProductList;

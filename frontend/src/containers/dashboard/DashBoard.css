@@ -1,0 +1,26 @@
+.dashboard-header {
+  display: flex;
+  background-color: white !important;
+  justify-content: space-between;
+}
+.dashboard-header .dashboard-header__logo {
+  padding-left: 20px;
+}
+.dashboard-header .dashboard-header__user {
+  padding-right: 20px;
+}
+.dashboard-header .dashboard-header__user .wrapper_user {
+  cursor: pointer;
+}
+.dashboard-header .dashboard-header__user .wrapper_user .user_avatar {
+  width: 23px !important;
+  max-width: 23px !important;
+  margin-bottom: 3px;
+  border-radius: 30px;
+}
+.dashboard__aside .logo {
+  padding: 15px;
+}
+.dashboard__aside .logo img {
+  width: 90%;
+}

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 
 const PostList = (props) => {
-  console.log(props);
 
   return (
     <div>

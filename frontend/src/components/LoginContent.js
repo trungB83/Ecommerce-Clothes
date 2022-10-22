@@ -14,7 +14,6 @@ function LoginContent() {
   const navigate = useNavigate()
 
   const onFinish = values => {
-    console.log("onFinish", values);
     if (values && values.ten_tai_khoan && values.mat_khau) {
       const body = {
         ten_tai_khoan: values.ten_tai_khoan.trim(),
@@ -42,7 +41,6 @@ function LoginContent() {
     setIsLoading(true)
     try {
       const response = await httpClient.post("http://localhost:3003/users", body)
-      console.log("response", response);
       if (
         response &&
         response.data &&
