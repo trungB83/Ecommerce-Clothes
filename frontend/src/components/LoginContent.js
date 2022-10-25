@@ -1,65 +1,64 @@
 // import "../assets/styles/loginContent.scss"
-import { Button, Checkbox, Form, Input, notification } from "antd"
-import React, { useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
-import { auth, statusNotification } from "../core-authent/constants/constant"
-import { pathApi } from "../core-authent/constants/pathApi"
-import { renderContentNoti } from "../core-authent/utils/utils"
-import { httpClient } from "../axiosClient"
-import { setLocal, setObjectLocal } from "../core-authent/utils/localStorage"
-import routes from '../core-authent/constants/routes';
+import { Button, Checkbox, Form, Input, notification } from "antd";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { auth, statusNotification } from "../core-authent/constants/constant";
+import { pathApi } from "../core-authent/constants/pathApi";
+import { renderContentNoti } from "../core-authent/utils/utils";
+import { httpClient } from "../axiosClient";
+import { setLocal, setObjectLocal } from "../core-authent/utils/localStorage";
+import routes from "../core-authent/constants/routes";
 
 function LoginContent() {
-  const [isLoading, setIsLoading] = useState(false)
-  const navigate = useNavigate()
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
-  const onFinish = values => {
+  const onFinish = (values) => {
     if (values && values.ten_tai_khoan && values.mat_khau) {
       const body = {
         ten_tai_khoan: values.ten_tai_khoan.trim(),
-        mat_khau: values.mat_khau.trim()
-      }
-      handleLogin(body)
+        mat_khau: values.mat_khau.trim(),
+      };
+      handleLogin(body);
     } else {
-      return
+      return;
     }
-  }
+  };
 
+  const onFinishFailed = (errorInfo) => {};
 
-
-  const onFinishFailed = errorInfo => {}
-
-  const openNotification = content => {
+  const openNotification = (content) => {
     notification.open({
       message: content.message,
       description: content.description,
-      icon: content.icon
-    })
-  }
+      icon: content.icon,
+    });
+  };
 
-  const handleLogin = async body => {
-    setIsLoading(true)
+  const handleLogin = async (body) => {
+    setIsLoading(true);
     try {
-      const response = await httpClient.post("http://localhost:3003/users", body)
+      const response = await httpClient.post(pathApi.auth.login, body);
+      console.log("response", response);
       if (
         response &&
         response.data &&
         response.data.data &&
         response.data.success
       ) {
-        setIsLoading(false)
-        setLocal(auth.TOKEN, response.data.token)
-        setObjectLocal(auth.USER_INFO, response.data.data)
-        navigate(routes.dashboard)
+        setIsLoading(false);
+        setLocal(auth.TOKEN, response.data.token);
+        setObjectLocal(auth.USER_INFO, response.data.data);
+        navigate(routes.customer);
         notification.success({
-          ...renderContentNoti(statusNotification.login.LOGIN_SUCCESS)
-        })
+          ...renderContentNoti(statusNotification.login.LOGIN_SUCCESS),
+        });
       } else {
-        setIsLoading(false)
-        notification.error({ ...renderContentNoti() })
+        setIsLoading(false);
+        notification.error({ ...renderContentNoti() });
       }
     } catch (error) {
-      setIsLoading(false)
+      setIsLoading(false);
       if (
         error &&
         error.response &&
@@ -72,11 +71,11 @@ function LoginContent() {
           ...renderContentNoti(
             statusNotification.login.LOGIN_FAIL,
             error.response.data.error
-          )
-        })
+          ),
+        });
       }
     }
-  }
+  };
 
   return (
     <div className="main">
@@ -96,8 +95,8 @@ function LoginContent() {
           rules={[
             {
               required: true,
-              message: "Vui lòng nhập tên đăng nhập!"
-            }
+              message: "Vui lòng nhập tên đăng nhập!",
+            },
           ]}
         >
           <Input placeholder="Tên đăng nhập " />
@@ -108,8 +107,8 @@ function LoginContent() {
           rules={[
             {
               required: true,
-              message: "Vui lòng nhập mật khẩu!"
-            }
+              message: "Vui lòng nhập mật khẩu!",
+            },
           ]}
         >
           <Input.Password placeholder="Mật khẩu" />
@@ -119,7 +118,7 @@ function LoginContent() {
           valuePropName="checked"
           wrapperCol={{
             offset: 8,
-            span: 16
+            span: 16,
           }}
           className="group-cb-forgot"
         >
@@ -132,7 +131,7 @@ function LoginContent() {
         <Form.Item
           wrapperCol={{
             offset: 8,
-            span: 16
+            span: 16,
           }}
         >
           <Button
@@ -149,7 +148,7 @@ function LoginContent() {
         <Form.Item
           wrapperCol={{
             offset: 8,
-            span: 16
+            span: 16,
           }}
         >
           <Button htmlType="submit">
@@ -158,6 +157,6 @@ function LoginContent() {
         </Form.Item>
       </Form>
     </div>
-  )
+  );
 }
-export default LoginContent
+export default LoginContent;

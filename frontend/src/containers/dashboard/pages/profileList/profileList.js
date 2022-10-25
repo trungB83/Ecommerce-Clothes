@@ -81,18 +81,6 @@ function ProfileList() {
   }
   console.log("gridData", gridData)
 
-  // const modifiedData = gridData.map(({ body, ...item: [...string[]] }) => ({
-  //   ...item,
-  //   key: item.id,
-  //   content: body,
-  // }));
-  // console.log("modifiedData", modifiedData);
-
-  // const handleDelete = (value: any) => {
-  //   const dataSuorce = [...modifiedData];
-  //   const filteredData = dataSuorce.filter((item) => item.id !== value.id);
-  //   SetGridData(filteredData);
-  // };
 
   const handleCategories = newValue => {
     console.log("handleCategories", newValue)

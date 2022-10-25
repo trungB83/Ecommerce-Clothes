@@ -1,0 +1,43 @@
+.CusstomProfile {
+  text-align: center;
+
+  .ant-layout {
+    background-color: transparent;
+  }
+  .CusstomProfile__top {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      padding-left: 20px;
+      font-size: 28px;
+      font-weight: 700;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    padding-bottom: 20px;
+  }
+  .CusstomProfile__middle {
+    padding-bottom: 10px;
+  }
+  .CusstomProfile__bottom {
+    padding-bottom: 20px;
+    .CusstomProfile__bottom-item {
+      padding-bottom: 10px;
+    }
+  }
+}
+.modalOder {
+  .modalOder__products {
+    .modalOder__products-table {
+      width: 100%;
+      text-align: center;
+      tr, td, th {
+        border: 1px solid rgb(185, 185, 185);
+      }
+    }
+  }
+}

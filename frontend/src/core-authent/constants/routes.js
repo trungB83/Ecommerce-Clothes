@@ -1,5 +1,6 @@
 const routes = {
   login: "/login",
+  customer: "/user/:userId",
   register: "/register",
   forgot: "/forgot",
   dashboard: "/admin/dashboard",
