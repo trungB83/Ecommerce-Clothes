@@ -13,15 +13,15 @@ import React from "react"
 import FormItem from "antd/es/form/FormItem"
 import TextArea from "antd/lib/input/TextArea"
 import TreeSelect, { TreeNode } from "antd/lib/tree-select"
-import { httpClient } from "axiosClient"
-import { statusNotification } from "constants/constant"
-import { pathApi } from "../../../../core-authent/constants/pathApi"
-import routes from "../../../../core-authent/constants/routes"
+import { httpClient } from "../../../../../../axiosClient"
+import { statusNotification } from "../../../../../../core-authent/constants/constant"
+import { pathApi } from "../../../../../../core-authent/constants/pathApi"
+import routes from "../../../../../../core-authent/constants/routes"
 
-import { renderContentNoti } from "utils/utils"
+import { renderContentNoti } from "../../../../../../core-authent/utils/utils"
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import "./AddUser.scss"
+import "./AddUser.css"
 
 const defaultUser = {
   ten_nhan_vien: "",

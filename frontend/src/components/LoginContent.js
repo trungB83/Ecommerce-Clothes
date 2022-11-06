@@ -49,6 +49,7 @@ function LoginContent() {
         setIsLoading(false);
         setLocal(auth.TOKEN, response.data.token);
         setObjectLocal(auth.USER_INFO, response.data.data);
+        
         navigate(routes.customer);
         notification.success({
           ...renderContentNoti(statusNotification.login.LOGIN_SUCCESS),

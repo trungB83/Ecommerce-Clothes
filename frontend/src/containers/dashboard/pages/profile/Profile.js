@@ -7,14 +7,13 @@ import {
 } from "@ant-design/icons"
 import React from "react"
 import { Col, Row, Button } from "antd"
-import { auth } from "constants/constant"
+import { auth } from "../../../../core-authent/constants/constant"
 import routes from "../../../../core-authent/constants/routes"
-
-import { getObjectLocal } from "utils/localStorage"
+import { getObjectLocal } from "../../../../core-authent/utils/localStorage"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import "./Profile.scss"
-import { API_URL } from "config"
+import "./Profile.css"
+import { API_URL } from "../../../../config"
 import Avatar from "../../../../assets/images/avatar.png"
 function Profile() {
   const [userInfo, setUserInfo] = useState(null)

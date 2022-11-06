@@ -3,6 +3,15 @@
     box-sizing: border-box;
 }
 
+p{
+    margin: 0!important;
+}
+
+.img-mini { 
+    max-width: 20%;
+
+}
+
 
 .header .topbar-menu {
     background-color: #f8a83a;
@@ -222,6 +231,13 @@
     width: 100%;
 }
 
+.main-product .quatity {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
 .main-product .quatity .quantity-field {
     text-align: center;
     border-radius: 10px;
@@ -266,84 +282,10 @@
 }
 
 
-.footer {
-    background-color: rgb(66, 59, 54);
-    color: #fff;
-}
-
-.footer .footer-main {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.footer .footer-main .wrapper-logo-footer a img {
+.modalOder .modalOder__products .modalOder__products-table {
     width: 100%;
-}
-
-.footer .footer-main .footer-link ul {
-    list-style: none;
-    padding: 5px;
-}
-
-.footer .footer-main .footer-link .social li a {
-    color:white;
-    font-size: 20px;
-}
-
-.footer .footer-main .footer-link .social li a i {
-    padding-right: 10px
-}
-
-.footer .footer-main .footer-link .social li a:hover {
-    text-decoration: none;
-}
-
-.footer .footer-main .footer-link ul {
-    list-style: none;
-    padding: 5px;
-}
-
-.footer .footer-main .footer-link .support li a {
-    color:white;
-    font-size: 18px;
-}
-
-.footer .footer-main .footer-link .support li a i {
-    padding-right: 10px
-}
-
-.footer .footer-main .footer-link .support li a:hover {
-    text-decoration: none;
-}
-
-.footer .footer-main .footer-link .social {
-    border-bottom: dashed 1px white;
-    margin-bottom: 10px;
-}
-
-.footer .footer-main .footer-link .social .support {
-    margin-top: 0;
-}
-
-.footer .footer-main .footer-content {
-    font-size: 15px;
-}
-
-.footer .footer-main .footer-content .title-footer {
-    font-size: 18px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.footer .footer-main .footer-content p {
-    margin :0;
-}
-
-.footer .footer-main .footer-link .title-footer {
-    font-size: 18px;
-
-}
-
-.footer .nocoppyright {
     text-align: center;
+}
+.modalOder .modalOder__products .modalOder__products-table tr, .modalOder .modalOder__products .modalOder__products-table td, .modalOder .modalOder__products .modalOder__products-table th {
+    border: 1px solid #b9b9b9;
 }

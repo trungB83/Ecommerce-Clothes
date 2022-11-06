@@ -11,7 +11,7 @@ import {
   Table,
   TreeSelect
 } from "antd"
-import "./PostList.scss"
+import "./PostList.css"
 import { Link } from "react-router-dom"
 import routes from "../../../../core-authent/constants/routes"
 
@@ -50,7 +50,7 @@ const menucheckbox = <Menu onClick={handleMenuClick} items={itemsCheckbox} />
 
 const { Option } = Select
 
-function PostList() {
+function OrderList() {
   const [selectedRowKeys, setSelectedRowKeys] = useState([])
   const [gridData, SetGridData] = useState([])
   const [value, setValue] = useState()
@@ -58,16 +58,16 @@ function PostList() {
   const [editingKey, setEditingKey] = useState("")
   const [editRow, setEditRow] = useState(false)
 
-  const onSelectChange = newSelectedRowKeys => {
-    console.log("selectedRowKeys changed: ", selectedRowKeys)
-    setSelectedRowKeys(newSelectedRowKeys)
-  }
+  // const onSelectChange = newSelectedRowKeys => {
+  //   console.log("selectedRowKeys changed: ", selectedRowKeys)
+  //   setSelectedRowKeys(newSelectedRowKeys)
+  // }
 
-  const rowSelection = {
-    selectedRowKeys,
-    onChange: onSelectChange
-  }
-  const hasSelected = selectedRowKeys.length > 0
+  // const rowSelection = {
+  //   selectedRowKeys,
+  //   onChange: onSelectChange
+  // }
+  // const hasSelected = selectedRowKeys.length > 0
 
   useEffect(() => {
     loadData()
@@ -80,19 +80,6 @@ function PostList() {
     SetGridData(data)
   }
   console.log("gridData", gridData)
-
-  // const modifiedData = gridData.map(({ body, ...item }) => ({
-  //   ...item,
-  //   key: item.id,
-  //   content: body,
-  // }));
-  // console.log("modifiedData", modifiedData);
-
-  // const handleDelete = (value) => {
-  //   const dataSuorce = [...modifiedData];
-  //   const filteredData = dataSuorce.filter(item => item.id !== value.id)
-  //   SetGridData(filteredData)
-  // }
 
   const handleCategories = newValue => {
     console.log(newValue)
@@ -157,7 +144,7 @@ function PostList() {
           <Col className="gutter-row" span={8}>
             <h2>Bài viết</h2>
           </Col>
-          <Col className="gutter-row" span={16}>
+          {/* <Col className="gutter-row" span={16}>
             <Row gutter={16}>
               <Col span={6}>
                 <TreeSelect
@@ -204,18 +191,18 @@ function PostList() {
                 />
               </Col>
             </Row>
-          </Col>
+          </Col> */}
         </Row>
         <Row gutter={16} className="select-action-group second-row">
           <Col className="gutter-row" span={12}>
-            <Dropdown overlay={menucheckbox}>
+            {/* <Dropdown overlay={menucheckbox}>
               <Button>
                 <Space>
                   Chọn hành động
                   <DownOutlined />
                 </Space>
               </Button>
-            </Dropdown>
+            </Dropdown> */}
           </Col>
           <Col className="right-actions" span={12}>
             <Button className="button-add-post ant-btn-round">
@@ -228,7 +215,7 @@ function PostList() {
         </Row>
         <div>
           <Table
-            rowSelection={rowSelection}
+            // rowSelection={rowSelection}
             pagination={{
               onChange: page => {
                 console.log(page)
@@ -245,4 +232,4 @@ function PostList() {
   )
 }
 
-export default PostList
+export default OrderList

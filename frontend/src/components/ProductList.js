@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "../assets/styles/list-product.css";
 import { Link } from "react-router-dom";
+import Context from "../store/Context";
+import { addCartProduct } from "./../store/Action";
 
 const ProductList = (props) => {
-  const [cart, setCart] = useState([]);
-
+  const [state, dispatch] = useContext(Context);
+  console.log("state", state);
   const handleAddProduct = (item) => {
-    setCart([...cart,item])
+    console.log("item", item);
+    const productInfo = { ...item };
+    productInfo.count += 1;
+    console.log("productInfo", productInfo);
+    dispatch(addCartProduct(productInfo));
   };
+
   return (
     <>
       <div className="list-product-main">
@@ -73,10 +80,19 @@ const ProductList = (props) => {
                   </div>
                   <div className="box-text">
                     <h5 className="title-product">{product.prod_name}</h5>
-                    <p className="price-product">{product.prod_price}</p>
+                    <p className="price-product">
+                      {product.prod_price.toLocaleString("it-IT", {
+                        style: "currency",
+                        currency: "VND",
+                      })}
+                    </p>
                   </div>
                 </Link>
-                <button type="primary" onClick={() => handleAddProduct(product)}>
+                <button
+                className="AddToCart"
+                  type="primary"
+                  onClick={() => handleAddProduct(product)}
+                >
                   Thêm vào giỏ hàng
                 </button>
               </div>

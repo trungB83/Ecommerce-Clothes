@@ -16,9 +16,9 @@ const Header = () => {
 
   useEffect(() => {
     const getCategories = async () => {
-      let prodRes = await axios.get(`${API_LOCAL_URL}products`);
+      let prodRes = await axios.get(`${API_LOCAL_URL}/products`);
       setCategoryProducts(prodRes.data.category_list);
-      let postRes = await axios.get(`${API_LOCAL_URL}posts`);
+      let postRes = await axios.get(`${API_LOCAL_URL}/posts`);
       setCategoryPost(postRes.data.category_list);
     };
     getCategories();
@@ -59,7 +59,7 @@ const Header = () => {
                       id="search-bar"
                     />
                     <button className="submit-search">
-                      <SearchOutlined />
+                      <SearchOutlined style={{ fontSize: '150%'}}/>
                     </button>
                   </div>
                 </div>
@@ -68,13 +68,13 @@ const Header = () => {
                 <div className="wrapper-cart">
                   <div className="wrapper-hotline">
                     <Link to="#" className="btn-hotline">
-                      <PhoneOutlined />
+                      <PhoneOutlined style={{ fontSize: '150%'}}/>
                       098989898
                     </Link>
                   </div>
                   <div className="wrapper-icon">
                     <Link to="/cart/" className="cart">
-                      <ShoppingCartOutlined />
+                      <ShoppingCartOutlined style={{ fontSize: '150%'}}/>
                     </Link>
                   </div>
                 </div>

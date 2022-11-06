@@ -28,11 +28,11 @@ function Home() {
 
     const jsonDataPost = await responsePost.json()
     const dataPost = jsonDataPost.data
-    SetGridDataPost(gridDataPost)
+    SetGridDataPost(dataPost)
 
     const jsonDataUser = await responseUser.json()
     const dataUser = jsonDataUser.data
-    SetGridDataUser(gridDataUser)
+    SetGridDataUser(dataUser)
   }
   console.log("gridDataPost", gridDataPost)
 
@@ -104,12 +104,12 @@ function Home() {
             <div className="HomeDashBoard__content-box">
               <h1>CHÀO MỪNG BẠN ĐẾN VỚI HỆ THỐNG QUẢN LÝ</h1>
               <div className="HomeDashBoard__content-text">
-                <Row>
+                <Row gutter={32}>
                   <Col
                     span={12}
                     className="HomeDashBoard__content-panel user-panel"
                   >
-                    <Link to={routes.dashboard}>
+                    <Link to={`${routes.dashboard}${routes.profilelist}`}>
                       <div className="HomeDashBoard__content-btn--img">
                         <UsergroupAddOutlined style={{ fontSize: "3em" }} />
                       </div>
@@ -122,7 +122,7 @@ function Home() {
                     span={12}
                     className="HomeDashBoard__content-panel post-panel"
                   >
-                    <Link to={routes.dashboard}>
+                    <Link to={`${routes.dashboard}${routes.posts}`}>
                       <div className="HomeDashBoard__content-btn--img">
                         <FileSearchOutlined style={{ fontSize: "3em" }} />
                       </div>
@@ -135,7 +135,7 @@ function Home() {
                     span={12}
                     className="HomeDashBoard__content-panel product-panel"
                   >
-                    <Link to={routes.dashboard}>
+                    <Link to={`${routes.dashboard}${routes.profilelist}`}>
                       <div className="HomeDashBoard__content-btn--img">
                         <ProfileOutlined style={{ fontSize: "3em" }} />
                       </div>
@@ -148,7 +148,7 @@ function Home() {
                     span={12}
                     className="HomeDashBoard__content-panel product-panel"
                   >
-                    <Link to={routes.dashboard}>
+                    <Link to={`${routes.dashboard}${routes.posts}`}>
                       <div className="HomeDashBoard__content-btn--img">
                         <ProfileOutlined style={{ fontSize: "3em" }} />
                       </div>

@@ -21,7 +21,7 @@ const Footer = () => {
               </div>
               <div className="col-lg-4">
                 <div className="footer-content">
-                  <h4 className="tittle-footer">
+                  <h4 className="title-footer">
                     CÔNG TY CỔ PHẦN THỜI TRANG LIBERTY
                   </h4>
                   <p>Trụ sở chính: 307 Đê La Thành - Đống Đa - Hà Nội</p>

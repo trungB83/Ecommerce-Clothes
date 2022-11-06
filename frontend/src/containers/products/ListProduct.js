@@ -9,6 +9,7 @@ const ListProduct = () => {
   const [products, setProducts] = useState([]);
   const [currentCategory, setCurrentCategory] = useState({});
   const params = useParams();
+  console.log("params", params);
 
   useEffect(() => {
     const getProducts = async () => {

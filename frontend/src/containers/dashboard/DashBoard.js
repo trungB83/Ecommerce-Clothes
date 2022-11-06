@@ -109,7 +109,7 @@ const DashBoard = () => {
             <Menu.Item icon={<FileAddOutlined />} key={"3"}>
               <Link
                 defaultChecked={true}
-                to={`${routes.dashboard}${routes.adduser}`}
+                to={`${routes.dashboard}`}
               >
                 Thêm bài viết
               </Link>

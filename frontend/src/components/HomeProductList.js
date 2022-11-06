@@ -1,8 +1,31 @@
-import React from "react";
+import { Pagination } from "antd";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import Context from "../store/Context";
+import { addCartProduct } from "./../store/Action";
+const productsPerPage = 4;
 
 const HomeProductList = (props) => {
+  console.log("props", props);
+  const [number, setNumber] = useState(1);
+  const [state, dispatch] = useContext(Context);
 
+  //   handle Pagination
+  const handlePage = (pageNumber) => setNumber(pageNumber);
+  let newData = props.products.slice(
+    (number - 1) * productsPerPage,
+    productsPerPage * number
+  );
+  console.log("newData", newData);
+
+  console.log("state", state);
+  const handleAddProduct = (item) => {
+    console.log("item", item);
+    const productInfo = { ...item };
+    productInfo.count += 1;
+    console.log("productInfo", productInfo);
+    dispatch(addCartProduct(productInfo));
+  };
   return (
     <>
       <div className="product-list">
@@ -40,7 +63,7 @@ const HomeProductList = (props) => {
           <div className="wrapper-list-products">
             <h4 className="title-list-products">Sản phẩm mới nhất</h4>
             <div className="row">
-              {props.products.map((product, index) => (
+              {newData.map((product, index) => (
                 <div
                   className="col-lg-2 col-md-4 col-sm-6 col-xs-6 "
                   key={index}
@@ -58,11 +81,31 @@ const HomeProductList = (props) => {
                     </div>
                     <div className="box-text">
                       <h5 className="title-product">{product.prod_name}</h5>
-                      <p className="price-product">{product.prod_price}</p>
+                      <p className="price-product">
+                        {product.prod_price.toLocaleString("it-IT", {
+                          style: "currency",
+                          currency: "VND",
+                        })}
+                      </p>
                     </div>
                   </Link>
+                  <button
+                    className="AddToCart"
+                    type="primary"
+                    onClick={() => handleAddProduct(product)}
+                  >
+                    Thêm vào giỏ hàng
+                  </button>
                 </div>
               ))}
+            </div>
+            <div className="pagination">
+              <Pagination
+                defaultCurrent={number}
+                pageSize={productsPerPage}
+                total={props.products.length}
+                onChange={handlePage}
+              />
             </div>
           </div>
         </div>

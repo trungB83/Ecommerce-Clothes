@@ -1,0 +1,13 @@
+{
+  
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start" : "json-server --watch index.js  --port 3003"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

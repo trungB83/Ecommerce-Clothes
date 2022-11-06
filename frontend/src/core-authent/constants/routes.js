@@ -3,7 +3,7 @@ const routes = {
   customer: "/user/:userId",
   register: "/register",
   forgot: "/forgot",
-  dashboard: "/admin/dashboard",
+  dashboard: "/dashboard",
   home: "/home",
   posts: "/posts",
   profile: "/profile",

@@ -21,6 +21,12 @@
     color: #fff;
     background: #001529;
 }
+
+.pagePostList .right-actions .button-add-post a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .pagePostList .right-actions .button-add-post a:hover {
     color: white;
 }

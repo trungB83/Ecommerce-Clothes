@@ -1,4 +1,4 @@
-import "./ProfileList.css";
+import "./ProductList.css";
 import {
   Button,
   Col,
@@ -7,7 +7,6 @@ import {
   Dropdown,
   Menu,
   message,
-  Radio,
   Row,
   Select,
   Space,
@@ -19,7 +18,12 @@ import {
 } from "antd";
 import { Link } from "react-router-dom";
 import routes from "../../../../core-authent/constants/routes";
-
+import {
+  fetchUser,
+  deleteUser,
+  addUser,
+  updateUser, 
+} from "../../../../store/Action";
 import React, { useEffect, useState } from "react";
 import {
   DownOutlined,
@@ -34,6 +38,7 @@ import Search from "antd/lib/input/Search";
 import { TreeNode } from "antd/lib/tree-select";
 import { pathApi } from "../../../../core-authent/constants/pathApi";
 import { BASE_URL } from "../../../../config";
+import Context from './../../../../store/Context';
 
 const onSearch = (value) => console.log(value);
 
@@ -63,7 +68,7 @@ const menucheckbox = <Menu onClick={handleMenuClick} items={itemsCheckbox} />;
 
 const { Option } = Select;
 
-function OrderList() {
+function ProductList() {
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
   const [value, setValue] = useState();
   const [gridData, SetGridData] = useState([]);
@@ -72,7 +77,7 @@ function OrderList() {
   const [isModalOpenDeleteUser, setIsModalOpenDeleteUser] = useState(false);
   const [isModalOpenAddUser, setIsModalOpenAddUser] = useState(false);
   const [isModalOpenUpdateUser, setIsModalOpenUpdateUser] = useState(false);
-  const dispatch = useAppDispatch();
+
 
   const onSelectChange = (newSelectedRowKeys) => {
     console.log("selectedRowKeys changed: ", selectedRowKeys);
@@ -118,7 +123,7 @@ function OrderList() {
   };
 
   const handleDeleteUser = (id) => {
-    dispatch(deleteUser(id));
+    // dispatch(deleteUser(id));
   };
 
   // Handle add user
@@ -152,7 +157,7 @@ function OrderList() {
         mat_khau: values.mat_khau.trim(),
         xac_nhan_mat_khau: values.xac_nhan_mat_khau.trim(),
       };
-      dispatch(addUser(body));
+      // dispatch(addUser(body));
       setIsModalOpenAddUser(false);
     } else {
       setIsModalOpenAddUser(false);
@@ -202,7 +207,7 @@ function OrderList() {
       if (values.mat_khau) {
         body.mat_khau = values.mat_khau.trim();
       }
-      dispatch(updateUser(body));
+      // dispatch(updateUser(body));
       setIsModalOpenUpdateUser(false);
       formUpdateUser.resetFields();
     } else {
@@ -211,6 +216,14 @@ function OrderList() {
       return;
     }
   };
+
+  useEffect(() => {
+    // dispatch(fetchUser());
+    return () => {
+      setCurrentId("");
+      setCurrentUser(null);
+    };
+  }, []);
 
   const columns = [
     {
@@ -596,4 +609,4 @@ function OrderList() {
   );
 }
 
-export default OrderList;
+export default ProductList;

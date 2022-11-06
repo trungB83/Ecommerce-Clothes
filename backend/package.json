@@ -1,13 +1,23 @@
 {
-  
-  "name": "backend",
+  "name": "express-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "restfull api, express",
   "main": "index.js",
   "scripts": {
-    "start" : "json-server --watch index.js  --port 3003"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.25.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }

@@ -1,0 +1,17 @@
+{
+  "name": "shop-clothes-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd backend && npm run start\" \"cd frontend && npm run start\"",
+    "install-all": "concurrently \"cd backend && npm install\" \"cd frontend && npm install\"",
+    "format": "concurrently \"cd backend && npm run format\" \"cd frontend && npm run format\""
+  },
+  "keywords": [],
+  "author": "trungbui",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.2.1"
+  }
+}

@@ -9,6 +9,10 @@ body {
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 .header .topbar-menu {
     background-color: #f8a83a;
 }
@@ -427,10 +431,11 @@ body {
     font-size: 15px;
 }
 
-.footer .footer-main .footer-content .title-footer {
-    font-size: 18px;
+.footer .footer-main .title-footer {
+    color: white;
     text-transform: uppercase;
     margin-bottom: 20px;
+
 }
 
 .footer .footer-main .footer-content p {
