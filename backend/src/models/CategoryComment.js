@@ -7,33 +7,33 @@ import db from "../configs/database.js";
 const { DataTypes } = Sequelize;
 
 // Define schema
-const Post = db.define(
-  "tbl_posts",
+const CategoryComment = db.define(
+  "tbl_comment_categories",
   {
     // Define attributes
-    post_id: {
+    comment_category_id: {
       type: Sequelize.INTEGER,
       primaryKey: true,
     },
-    post_title: {
+    comment_category_name: {
       type: Sequelize.STRING,
     },
-    post_description: {
+    comment_category_description: {
       type: Sequelize.STRING,
     },
-    post_content: {
+    comment_category_image: {
       type: Sequelize.STRING,
     },
-    post_image: {
-      type: Sequelize.STRING,
-    },
-    post_status: {
+    image_category_is_parent: {
       type: Sequelize.INTEGER,
     },
-    post_category_id: {
+    image_category_parent_id: {
       type: Sequelize.INTEGER,
     },
-    post_slug: {
+    image_category_status: {
+      type: Sequelize.INTEGER,
+    },
+    image_category_slug: {
       type: Sequelize.STRING,
     },
     created_by: {
@@ -43,22 +43,22 @@ const Post = db.define(
       type: Sequelize.INTEGER,
     },
     created_at: {
-      field: 'created_at',
-      type: DataTypes.DATE
+      field: "created_at",
+      type: DataTypes.DATE,
     },
 
     updated_at: {
-      field: 'updated_at',
-      type: DataTypes.DATE
+      field: "updated_at",
+      type: DataTypes.DATE,
     },
   },
   {
     // Freeze Table Name
     freezeTableName: true,
-    createdAt: 'created_at',
-    updatedAt: 'updated_at'
+    createdAt: "created_at",
+    updatedAt: "updated_at",
   }
 );
 
 // Export model Post
-export default Post;
+export default CategoryComment;

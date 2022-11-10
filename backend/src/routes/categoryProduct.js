@@ -1,26 +1,26 @@
 // Import express
 import express from "express";
-// Import Post Controller
+// Import category product Controller
 import {
   getCategoryProducts,
   getCategoryProductById,
   createCategoryProduct,
   updateCategoryProduct,
   deleteCategoryProduct,
-} from "../controllers/categoryProduct.js";
+} from "../controllers/CategoryProduct.js";
 
 // Init express router
 const router = express.Router();
 
-// Route get all posts
+// Route get all category product
 router.get("/cateProds/", getCategoryProducts);
-// Route get post by id
+// Route get category product by id
 router.get("/cateProds/:id", getCategoryProductById);
-// Route create a new post
+// Route create a new category product
 router.post("/cateProds", createCategoryProduct);
-// Route update post by id
+// Route update category product by id
 router.put("/cateProds/:id", updateCategoryProduct);
-// Route delete post by id
+// Route delete category product by id
 router.delete("/cateProds/:id", deleteCategoryProduct);
 
 // export router

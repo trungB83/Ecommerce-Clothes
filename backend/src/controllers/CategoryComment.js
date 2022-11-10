@@ -1,12 +1,12 @@
 // Import Model
-import CategoryPost from "../models/CategoryPost.js";
+import CategoryComment from "../models/CategoryComment.js";
 
 // Get all Category Post
-export const getCategoryPosts = async (req, res) => {
+export const getCategoryComments = async (req, res) => {
     try {
-        const catePost = await CategoryPost.findAll();
+        const data = await CategoryComment.findAll();
         res.send({
-            data: catePost,
+            data: data,
             success: true,
             message: 'get data ok'
         });
@@ -16,23 +16,23 @@ export const getCategoryPosts = async (req, res) => {
 }
 
 // Get Category Post by id
-export const getCategoryPostById = async (req, res) => {
+export const getCategoryCommentById = async (req, res) => {
     try {
-        const catePost = await CategoryPost.findAll({
+        const data = await CategoryComment.findAll({
             where: {
-                categoty_id: req.params.id
+                comment_category_id : req.params.id
             }
         });
-        res.send(catePost[0]);
+        res.send(data[0]);
     } catch (err) {
         console.log(err);
     }
 }
 
 // Create a new Category Post
-export const createCategoryPost = async (req, res) => {
+export const createCategoryComment = async (req, res) => {
     try {
-        await CategoryPost.create(req.body);
+        await CategoryComment.create(req.body);
         res.json({
             "message": "Category Created"
         });
@@ -41,12 +41,12 @@ export const createCategoryPost = async (req, res) => {
     }
 }
 
-// Update Category Post by id
-export const updateCategoryPost = async (req, res) => {
+// Update CategoryComment by id
+export const updateCategoryComment = async (req, res) => {
     try {
-        await CategoryPost.update(req.body, {
+        await CategoryComment.update(req.body, {
             where: {
-                categoty_id: req.params.id
+                comment_category_id: req.params.id
             }
         });
         res.json({
@@ -57,12 +57,12 @@ export const updateCategoryPost = async (req, res) => {
     }
 }
 
-// Delete Category Post by id
-export const deleteCategoryPost = async (req, res) => {
+// Delete CategoryComment by id
+export const deleteCategoryComment = async (req, res) => {
     try {
-        await CategoryPost.destroy({
+        await CategoryComment.destroy({
             where: {
-                categoty_id: req.params.id
+                comment_category_id: req.params.id
             }
         });
         res.json({

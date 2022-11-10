@@ -7,11 +7,11 @@ import db from "../configs/database.js";
 const { DataTypes } = Sequelize;
 
 // Define schema
-const User = db.define(
-  "tbl_users",
+const Role = db.define(
+  "tbl_roles",
   {
     // Define attributes
-    user_id : {
+    role_id : {
       type: Sequelize.INTEGER,
       primaryKey: true,
       allowNull:false,
@@ -21,7 +21,7 @@ const User = db.define(
         notEmpty: true, // don't allow empty strings
       }
     },
-    user_email: {
+    role_name: {
       type: Sequelize.STRING,
       allowNull:true,
       validate:{
@@ -32,17 +32,7 @@ const User = db.define(
         max: 300, // only allow values <= 300
       }
     },
-    user_username	: {
-      type: Sequelize.STRING,
-      allowNull:false,
-      validate:{
-        is: ["^[a-z]+$", "i"], // will only allow letters
-        isAlphanumeric: true, // will only allow alphanumeric characters, so "_abc" will fail
-        notEmpty: true, // don't allow empty strings
-        max: 100, // only allow values <= 300
-      }
-    },
-    user_fullname: {
+    role_description	: {
       type: Sequelize.STRING,
       allowNull:true,
       validate:{
@@ -50,41 +40,6 @@ const User = db.define(
         isAlphanumeric: true, // will only allow alphanumeric characters, so "_abc" will fail
         notEmpty: true, // don't allow empty strings
         max: 100, // only allow values <= 300
-      }
-    },
-    user_password: {
-      type: Sequelize.STRING,
-      allowNull:false,
-      validate:{
-        is: ["^[a-z]+$", "i"], // will only allow letters
-        isAlphanumeric: true, // will only allow alphanumeric characters, so "_abc" will fail
-        notEmpty: true, // don't allow empty strings
-        max: 200, // only allow values <= 300
-      }
-    },
-    user_gender: {
-      type: Sequelize.INTEGER,
-      allowNull:true,
-      validate:{
-        isInt: true, // checks for valid integers
-        isNumeric: true, // will only allow numbers
-      }
-    },
-    user_phone: {
-      type: Sequelize.STRING,
-      allowNull:true,
-      validate:{
-        is: ["^[a-z]+$", "i"], // will only allow letters
-        isAlphanumeric: true, // will only allow alphanumeric characters, so "_abc" will fail
-        notEmpty: true, // don't allow empty strings
-        max: 100, // only allow values <= 300
-      }
-    },
-    role_id: {
-      type: Sequelize.INTEGER,
-      allowNull:true,
-      validate:{
-
       }
     },
     created_by: {
@@ -133,4 +88,4 @@ const User = db.define(
 );
 
 // Export model Post
-export default User;
+export default Role;

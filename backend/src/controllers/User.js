@@ -29,6 +29,19 @@ export const getUserById = async (req, res) => {
   }
 };
 
+export const getUserRoleAdmin = async (req, res) => {
+  try {
+    const user = await User.findAll({
+      where: {
+        role_id: req.params.role_id,
+      },
+    });
+    res.send(product[0]);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 // Create a new User
 export const createUser = async (req, res) => {
   try {

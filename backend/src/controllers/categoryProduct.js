@@ -1,10 +1,10 @@
 // Import Model
-import categoryProduct from "../models/categoryProduct.js";
+import CategoryProduct from "../models/CategoryProduct.js";
 
 // Get all Category Products
 export const getCategoryProducts = async (req, res) => {
     try {
-        const cateProd = await categoryProduct.findAll();
+        const cateProd = await CategoryProduct.findAll();
         res.send({
             data: cateProd,
             success: true,
@@ -18,9 +18,9 @@ export const getCategoryProducts = async (req, res) => {
 // Get Category Products by id
 export const getCategoryProductById = async (req, res) => {
     try {
-        const cateProd = await categoryProduct.findAll({
+        const cateProd = await CategoryProduct.findAll({
             where: {
-                categoryProducts_id: req.params.id
+                CategoryProducts_id: req.params.id
             }
         });
         res.send(cateProd[0]);
@@ -32,7 +32,7 @@ export const getCategoryProductById = async (req, res) => {
 // Create a new CategoryProduct
 export const createCategoryProduct = async (req, res) => {
     try {
-        await categoryProduct.create(req.body);
+        await CategoryProduct.create(req.body);
         res.json({
             "message": "Category Created"
         });
@@ -44,9 +44,9 @@ export const createCategoryProduct = async (req, res) => {
 // Update CategoryProduct by id
 export const updateCategoryProduct = async (req, res) => {
     try {
-        await categoryProduct.update(req.body, {
+        await CategoryProduct.update(req.body, {
             where: {
-                categoryProduct_id: req.params.id
+                CategoryProduct_id: req.params.id
             }
         });
         res.json({
@@ -60,9 +60,9 @@ export const updateCategoryProduct = async (req, res) => {
 // Delete CategoryProduct by id
 export const deleteCategoryProduct = async (req, res) => {
     try {
-        await categoryProduct.destroy({
+        await CategoryProduct.destroy({
             where: {
-                categoryProduct_id: req.params.id
+                CategoryProduct_id: req.params.id
             }
         });
         res.json({

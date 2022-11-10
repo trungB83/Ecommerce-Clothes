@@ -7,34 +7,25 @@ import db from "../configs/database.js";
 const { DataTypes } = Sequelize;
 
 // Define schema
-const Post = db.define(
-  "tbl_posts",
+const Permision = db.define(
+  "tbl_permisions",
   {
     // Define attributes
-    post_id: {
+    permision_id: {
       type: Sequelize.INTEGER,
       primaryKey: true,
     },
-    post_title: {
-      type: Sequelize.STRING,
-    },
-    post_description: {
-      type: Sequelize.STRING,
-    },
-    post_content: {
-      type: Sequelize.STRING,
-    },
-    post_image: {
-      type: Sequelize.STRING,
-    },
-    post_status: {
+    role_id: {
       type: Sequelize.INTEGER,
     },
-    post_category_id: {
-      type: Sequelize.INTEGER,
-    },
-    post_slug: {
+    permision_name: {
       type: Sequelize.STRING,
+    },
+    permision_description: {
+      type: Sequelize.STRING,
+    },
+    permision_parent_id: {
+      type: Sequelize.INTEGER,
     },
     created_by: {
       type: Sequelize.INTEGER,
@@ -43,22 +34,22 @@ const Post = db.define(
       type: Sequelize.INTEGER,
     },
     created_at: {
-      field: 'created_at',
-      type: DataTypes.DATE
+      field: "created_at",
+      type: DataTypes.DATE,
     },
 
     updated_at: {
-      field: 'updated_at',
-      type: DataTypes.DATE
+      field: "updated_at",
+      type: DataTypes.DATE,
     },
   },
   {
     // Freeze Table Name
     freezeTableName: true,
-    createdAt: 'created_at',
-    updatedAt: 'updated_at'
+    createdAt: "created_at",
+    updatedAt: "updated_at",
   }
 );
 
 // Export model Post
-export default Post;
+export default Permision;

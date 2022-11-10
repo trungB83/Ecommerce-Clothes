@@ -7,34 +7,25 @@ import db from "../configs/database.js";
 const { DataTypes } = Sequelize;
 
 // Define schema
-const Post = db.define(
-  "tbl_posts",
+const Comment = db.define(
+  "tbl_comments",
   {
     // Define attributes
-    post_id: {
+    comment_id : {
       type: Sequelize.INTEGER,
       primaryKey: true,
     },
-    post_title: {
+    comment_content: {
       type: Sequelize.STRING,
     },
-    post_description: {
-      type: Sequelize.STRING,
-    },
-    post_content: {
-      type: Sequelize.STRING,
-    },
-    post_image: {
-      type: Sequelize.STRING,
-    },
-    post_status: {
+    comment_parent: {
       type: Sequelize.INTEGER,
     },
-    post_category_id: {
+    comment_category_id: {
       type: Sequelize.INTEGER,
     },
-    post_slug: {
-      type: Sequelize.STRING,
+    comment_status: {
+      type: Sequelize.INTEGER,
     },
     created_by: {
       type: Sequelize.INTEGER,
@@ -46,7 +37,6 @@ const Post = db.define(
       field: 'created_at',
       type: DataTypes.DATE
     },
-
     updated_at: {
       field: 'updated_at',
       type: DataTypes.DATE
@@ -61,4 +51,4 @@ const Post = db.define(
 );
 
 // Export model Post
-export default Post;
+export default Comment;

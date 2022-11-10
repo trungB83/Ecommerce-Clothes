@@ -1,6 +1,6 @@
 // Import express
 import express from "express";
-// Import Product Controller
+// Import user Controller
 import { 
     getUsers,
     getUserById,
@@ -12,15 +12,15 @@ import {
  // Init express router
 const router = express.Router();
  
-// Route get all products
+// Route get all Users
 router.get('/users', getUsers);
-// Route get product by id
+// Route get User by id
 router.get('/users/:id', getUserById);
-// Route create a new product
+// Route create a new User
 router.post('/users', createUser);
-// Route update product by id
+// Route update User by id
 router.put('/users/:id', updateUser);
-// Route delete product by id
+// Route delete User by id
 router.delete('/psers/:id', deleteUser);
  
 // export router

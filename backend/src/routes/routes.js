@@ -1,13 +1,15 @@
 // Import express
 import express from "express";
-// Import Product Controller
+
 import productRouter from "./Product.js";
-// Import Post Controller
 import postRouter from "./Post.js";
-// Import category product Controller
-import cateProductRouter from './categoryProduct.js'
-import catePostRouter from './categoryPost.js'
+import cateProductRouter from './CategoryProduct.js'
+import catePostRouter from './CategoryPost.js'
 import userRouter from './User.js'
+import roleRouter from './Role.js'
+import permisionRouter from "./Permision.js"
+import commentRouter from "./Comment.js"
+import cateCommentRouter from "./CategoryComment.js"
  // Init express router
 const router = express.Router();
  
@@ -17,6 +19,10 @@ router.use(cateProductRouter);
 router.use(postRouter);
 router.use(catePostRouter);
 router.use(userRouter);
+router.use(roleRouter);
+router.use(permisionRouter);
+router.use(commentRouter);
+router.use(cateCommentRouter);
 
 // export router
 export default router;

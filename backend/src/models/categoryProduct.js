@@ -7,7 +7,7 @@ import db from "../configs/database.js";
 const { DataTypes } = Sequelize;
 
 // Define schema
-const categoryProduct = db.define(
+const CategoryProduct = db.define(
   "tbl_product_categories",
   {
     // Define attributes
@@ -39,12 +39,23 @@ const categoryProduct = db.define(
     updated_by: {
       type: Sequelize.INTEGER,
     },
+    created_at: {
+      field: 'created_at',
+      type: DataTypes.DATE
+    },
+
+    updated_at: {
+      field: 'updated_at',
+      type: DataTypes.DATE
+    },
   },
   {
     // Freeze Table Name
     freezeTableName: true,
+    createdAt: 'created_at',
+    updatedAt: 'updated_at'
   }
 );
 
 // Export model Post
-export default categoryProduct;
+export default CategoryProduct;

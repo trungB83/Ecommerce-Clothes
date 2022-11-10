@@ -7,7 +7,7 @@ import {
   createCategoryPost,
   updateCategoryPost,
   deleteCategoryPost,
-} from "../controllers/categoryPost.js";
+} from "../controllers/CategoryPost.js";
 
 // Init express router
 const router = express.Router();

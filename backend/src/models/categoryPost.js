@@ -7,16 +7,34 @@ import db from "../configs/database.js";
 const { DataTypes } = Sequelize;
 
 // Define schema
-const categoryPost = db.define('tbl_post_categories', {
+const CategoryPost = db.define('tbl_post_categories', {
   // Define attributes
-  categoty_id  : {
+  post_category_id   : {
     type: Sequelize.INTEGER,
     primaryKey: true
   },
-  categoty_name: {
+  post_category_name: {
     type: Sequelize.STRING
   },
-  category_description: {
+  post_category_description	: {
+    type: Sequelize.STRING
+  },
+  post_category_image	: {
+    type: Sequelize.STRING
+  },
+  post_category_is_parent   : {
+    type: Sequelize.INTEGER,
+  },
+  post_category_is_parent   : {
+    type: Sequelize.INTEGER,
+  },
+  post_category_parent_id   : {
+    type: Sequelize.INTEGER,
+  },
+  post_category_status   : {
+    type: Sequelize.INTEGER,
+  },
+  post_category_slug	: {
     type: Sequelize.STRING
   },
   created_by: {
@@ -24,11 +42,22 @@ const categoryPost = db.define('tbl_post_categories', {
   },
   updated_by: {
     type: Sequelize.INTEGER
-  }
+  },
+  created_at: {
+    field: 'created_at',
+    type: DataTypes.DATE
+  },
+
+  updated_at: {
+    field: 'updated_at',
+    type: DataTypes.DATE
+  },
 }, {
   // Freeze Table Name
-  freezeTableName: true
+  freezeTableName: true,
+  createdAt: 'created_at',
+      updatedAt: 'updated_at'
 });
 
 // Export model Post
-export default categoryPost;
+export default CategoryPost;
