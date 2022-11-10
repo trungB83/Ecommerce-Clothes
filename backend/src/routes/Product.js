@@ -6,7 +6,8 @@ import {
     getProductById,
     createProduct,
     updateProduct,
-    deleteProduct
+    deleteProduct,
+    getProductByCategory
  } from "../controllers/Product.js";
  
  // Init express router
@@ -16,6 +17,8 @@ const router = express.Router();
 router.get('/products', getProducts);
 // Route get product by id
 router.get('/products/:id', getProductById);
+// Route get product by id
+router.get('/products/f/cate/:id', getProductByCategory);
 // Route create a new product
 router.post('/products/', createProduct);
 // Route update product by id

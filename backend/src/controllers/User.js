@@ -1,12 +1,12 @@
 // Import Product Model
 import User from "../models/User.js";
 
-// Get all products
+// Get all User
 export const getUsers = async (req, res) => {
   try {
-    const user = await User.findAll();
+    const data = await User.findAll();
     res.send({
-      data: user,
+      data: data,
       success: true,
       message: "get User ok",
     });
@@ -15,28 +15,70 @@ export const getUsers = async (req, res) => {
   }
 };
 
-// Get product by id
+// Get User by id
 export const getUserById = async (req, res) => {
   try {
-    const user = await User.findAll({
+    const data = await User.findAll({
       where: {
-        product_id: req.params.id,
+        user_id: req.params.id,
       },
     });
-    res.send(product[0]);
+    res.send(data[0]);
+  } catch (err) {
+    alert(err);
+    console.log(err);
+  }
+};
+
+// Get User filler Admin
+export const getUserRoleAdmin = async (req, res) => {
+  try {
+    const data = await User.findAll({
+      where: {
+        role_id: "1",
+      },
+    });
+    res.send({
+      data: data,
+      success: true,
+      message: "get Admin user ok",
+    });
   } catch (err) {
     console.log(err);
   }
 };
 
-export const getUserRoleAdmin = async (req, res) => {
+// Get User filler Editor
+export const getUserRoleEditor = async (req, res) => {
   try {
-    const user = await User.findAll({
+    const data = await User.findAll({
       where: {
-        role_id: req.params.role_id,
+        role_id: "2",
       },
     });
-    res.send(product[0]);
+    res.send({
+      data: data,
+      success: true,
+      message: "get Editor user ok",
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+// Get User filler Customer
+export const getUserRoleCustomer = async (req, res) => {
+  try {
+    const data = await User.findAll({
+      where: {
+        role_id: "3",
+      },
+    });
+    res.send({
+      data: data,
+      success: true,
+      message: "get Customer user ok",
+    });
   } catch (err) {
     console.log(err);
   }

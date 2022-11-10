@@ -9,12 +9,13 @@ import Product from "../models/Product.js";
 // Get all products
 export const getProducts = async (req, res) => {
   try {
-    const product = await Product.findAll();
+    const product = await Product.findAndCountAll({limit:2});
     res.send({
       data: product,
       success: true,
       message: "get product ok",
     });
+    
   } catch (err) {
     console.log(err);
   }
@@ -34,14 +35,37 @@ export const getProductById = async (req, res) => {
   }
 };
 
-export const getProductBy = async (req, res) => {
+// Get all products
+export const getProductsByPrice = async (req, res) => {
   try {
     const product = await Product.findAll({
       where: {
         product_id: req.params.id,
       },
     });
-    res.send(product[0]);
+    res.send({
+      data: product,
+      success: true,
+      message: "get product ok",
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+// Get products by Category
+export const getProductByCategory = async (req, res) => {
+  try {
+    const product = await Product.findAll({
+      where: {
+        category_products_id : req.params.id
+      },
+    });
+    res.send({
+      data: product,
+      success: true,
+      message: "get product ok",
+    });
   } catch (err) {
     console.log(err);
   }
