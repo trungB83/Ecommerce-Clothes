@@ -1,3 +1,8 @@
+// validate field, response lỗi (vừa log lỗi vừa trả về cho user thấy đc lỗi)
+// cần có filter (theo tên , giá , kích cỡ , từ khóa, danh mục, hỗ trợ lấy danh sách sản phẩm, phân trang api)
+// 
+// Cần tìm hiểu HOST STATUS 
+
 // Import Product Model
 import Product from "../models/Product.js";
 
@@ -17,6 +22,19 @@ export const getProducts = async (req, res) => {
 
 // Get product by id
 export const getProductById = async (req, res) => {
+  try {
+    const product = await Product.findAll({
+      where: {
+        product_id: req.params.id,
+      },
+    });
+    res.send(product[0]);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const getProductBy = async (req, res) => {
   try {
     const product = await Product.findAll({
       where: {

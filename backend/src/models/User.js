@@ -7,30 +7,33 @@ import db from "../configs/database.js";
 const { DataTypes } = Sequelize;
 
 // Define schema
-const categoryProduct = db.define(
-  "tbl_product_categories",
+const User = db.define(
+  "tbl_users",
   {
     // Define attributes
-    category_products_id: {
+    user_id : {
       type: Sequelize.INTEGER,
       primaryKey: true,
     },
-    category_products_name: {
+    user_email: {
       type: Sequelize.STRING,
     },
-    category_products_description: {
+    user_username	: {
       type: Sequelize.STRING,
     },
-    category_products_thumbnail: {
+    user_fullname: {
       type: Sequelize.STRING,
     },
-    category_products_slug: {
+    user_password: {
       type: Sequelize.STRING,
     },
-    category_products_status: {
+    user_gender: {
       type: Sequelize.INTEGER,
     },
-    category_products_parent_id: {
+    user_phone: {
+      type: Sequelize.STRING,
+    },
+    role_id: {
       type: Sequelize.INTEGER,
     },
     created_by: {
@@ -43,8 +46,9 @@ const categoryProduct = db.define(
   {
     // Freeze Table Name
     freezeTableName: true,
+    timestamps: false 
   }
 );
 
 // Export model Post
-export default categoryProduct;
+export default User;

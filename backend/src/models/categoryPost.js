@@ -19,10 +19,10 @@ const categoryPost = db.define('tbl_post_categories', {
   category_description: {
     type: Sequelize.STRING
   },
-  createdBy: {
+  created_by: {
     type: Sequelize.INTEGER
   },
-  updatedBy: {
+  updated_by: {
     type: Sequelize.INTEGER
   }
 }, {
