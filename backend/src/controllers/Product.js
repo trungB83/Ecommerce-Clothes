@@ -1,21 +1,84 @@
 // validate field, response lỗi (vừa log lỗi vừa trả về cho user thấy đc lỗi)
-// cần có filter (theo tên , giá , kích cỡ , từ khóa, danh mục, hỗ trợ lấy danh sách sản phẩm, phân trang api)
-// 
-// Cần tìm hiểu HOST STATUS 
+// cần có order (theo tên , giá , kích cỡ , từ khóa, danh mục, hỗ trợ lấy danh sách sản phẩm, phân trang api)
+//
+// Cần tìm hiểu HOST STATUS
 
 // Import Product Model
 import Product from "../models/Product.js";
-
+import { ValidationError } from "sequelize";
 // Get all products
 export const getProducts = async (req, res) => {
   try {
-    const product = await Product.findAndCountAll({limit:2});
+    const product = await Product.findAndCountAll({ limit: 4 });
     res.send({
       data: product,
       success: true,
       message: "get product ok",
     });
-    
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+// Get all products order by name (a-z)
+export const getProductsOrderNameASC = async (req, res) => {
+  try {
+    const product = await Product.findAndCountAll({
+      order: [["product_name", "ASC"]],
+    });
+    res.send({
+      data: product,
+      success: true,
+      message: "get a-z product ok",
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+// Get all products order by name (z-a)
+export const getProductsOrderNameDESC = async (req, res) => {
+  try {
+    const product = await Product.findAndCountAll({
+      order: [["product_name", "DESC"]],
+    });
+    res.send({
+      data: product,
+      success: true,
+      message: "get z-a product ok",
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+// Get all products order by price (low-high)
+export const getProductsOrderPriceASC = async (req, res) => {
+  try {
+    const product = await Product.findAndCountAll({
+      order: [["product_price", "ASC"]],
+    });
+    res.send({
+      data: product,
+      success: true,
+      message: "get low-high product ok",
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+// Get all products order by price (z-a)
+export const getProductsOrderPriceDESC = async (req, res) => {
+  try {
+    const product = await Product.findAndCountAll({
+      order: [["product_price", "DESC"]],
+    });
+    res.send({
+      data: product,
+      success: true,
+      message: "get high-low product ok",
+    });
   } catch (err) {
     console.log(err);
   }
@@ -58,7 +121,7 @@ export const getProductByCategory = async (req, res) => {
   try {
     const product = await Product.findAll({
       where: {
-        category_products_id : req.params.id
+        category_products_id: req.params.id,
       },
     });
     res.send({
@@ -78,8 +141,36 @@ export const createProduct = async (req, res) => {
     res.json({
       message: "Product Created",
     });
-  } catch (err) {
-    console.log(err);
+  } catch (e) {
+    // catch (err) {
+    //   console.log(err);
+    // }
+    const messages = {};
+    if (e instanceof ValidationError) {
+      e.errors.forEach((error) => {
+        let message;
+        switch (error.validatorKey) {
+          case "isEmail":
+            res.json({ message: "Please enter a valid email" });
+            break;
+          case "isDate":
+            res.json({ message: "Please enter a valid date" });
+            break;
+          case "isInt":
+            res.json({ message: "Please use an integer number" });
+            break;
+          case "is_null":
+            res.json({ message: "Please complete this field" });
+            break;
+          case "not_unique":
+            res.json({
+              message: error.value + " is taken. Please choose another one",
+            });
+            error.path = error.path.replace("_UNIQUE", "");
+        }
+        messages[error.path] = message;
+      });
+    }
   }
 };
 
@@ -94,8 +185,33 @@ export const updateProduct = async (req, res) => {
     res.json({
       message: "Product Updated",
     });
-  } catch (err) {
-    console.log(err);
+  } catch (e) {
+    const messages = {};
+    if (e instanceof ValidationError) {
+      e.errors.forEach((error) => {
+        let message;
+        switch (error.validatorKey) {
+          case "isEmail":
+            res.json({ message: "Please enter a valid email" });
+            break;
+          case "isDate":
+            res.json({ message: "Please enter a valid date" });
+            break;
+          case "isInt":
+            res.json({ message: "Please use an integer number" });
+            break;
+          case "is_null":
+            res.json({ message: "Please complete this field" });
+            break;
+          case "not_unique":
+            res.json({
+              message: error.value + " is taken. Please choose another one",
+            });
+            error.path = error.path.replace("_UNIQUE", "");
+        }
+        messages[error.path] = message;
+      });
+    }
   }
 };
 

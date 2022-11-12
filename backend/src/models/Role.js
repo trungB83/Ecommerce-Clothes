@@ -33,13 +33,10 @@ const Role = db.define(
       }
     },
     role_description	: {
-      type: Sequelize.STRING,
+      type: Sequelize.STRING(100),
       allowNull:true,
       validate:{
-        is: ["^[a-z]+$", "i"], // will only allow letters
-        isAlphanumeric: true, // will only allow alphanumeric characters, so "_abc" will fail
         notEmpty: true, // don't allow empty strings
-        max: 100, // only allow values <= 300
       }
     },
     created_by: {

@@ -11,23 +11,22 @@ const Product = db.define(
   "tbl_products",
   {
     // Define attributes
+    // setting allowNull to false will add NOT NULL to the column
     product_id: {
       type: Sequelize.BIGINT,
       primaryKey: true,
-      allowNull: false,
+      unique: true,
+      // allowNull: false,
       validate: {
         isNumeric: true, // will only allow numbers
         isInt: true, // checks for valid integers
-        is: /^[a-z]+$/i, // same as the previous example using real RegExp
-        isAlphanumeric: true, // will only allow alphanumeric characters, so "_abc" will fail
       },
     },
     product_name: {
-      type: Sequelize.STRING,
+      type: Sequelize.STRING(200),
       allowNull: false,
       validate: {
-        is: ["^[a-z]+$", "i"], // will only allow letters
-        isAlpha: true, // will only allow letters
+        
       },
     },
     product_price: {
@@ -35,53 +34,42 @@ const Product = db.define(
       allowNull: true,
       validate: {
         isNumeric: true, // will only allow numbers
-        isInt: true, // checks for valid integers
-        is: /^[a-z]+$/i, // same as the previous example using real RegExp
-        isAlphanumeric: true, // will only allow alphanumeric characters, so "_abc" will fail
       },
     },
     product_price_sale: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.FLOAT,
       allowNull: true,
       validate: {
         isNumeric: true, // will only allow numbers
-        isInt: true, // checks for valid integers
-        is: /^[a-z]+$/i, // same as the previous example using real RegExp
-        isAlphanumeric: true, // will only allow alphanumeric characters, so "_abc" will fail
+        isFloat: true, // checks for valid integers
       },
     },
     product_image: {
-      type: Sequelize.STRING,
+      type: Sequelize.STRING(200),
       allowNull: true,
       validate: {
-        isAlphanumeric: true,     // will only allow alphanumeric characters, so "_abc" will fail
         isAlpha: true, // will only allow letters
       },
     },
     product_description: {
-      type: Sequelize.STRING,
+      type: Sequelize.STRING(400),
       allowNull: true,
       validate: {
-        is: ["^[a-z]+$", "i"], // will only allow letters
         isAlpha: true, // will only allow letters
       },
     },
     product_status: {
       type: Sequelize.INTEGER,
-      allowNull: false,
+      allowNull: true,
       validate: {
         isNumeric: true, // will only allow numbers
         isInt: true, // checks for valid integers
-        is: /^[a-z]+$/i, // same as the previous example using real RegExp
-        isAlphanumeric: true, // will only allow alphanumeric characters, so "_abc" will fail
       },
     },
     product_slug: {
-      type: Sequelize.STRING,
+      type: Sequelize.STRING(200),
       allowNull: true,
       validate: {
-        is: ["^[a-z]+$", "i"], // will only allow letters
-        isAlpha: true, // will only allow letters
         isUrl: true, // checks for url format (http://foo.com)
       },
     },
@@ -91,8 +79,7 @@ const Product = db.define(
       validate: {
         isNumeric: true, // will only allow numbers
         isInt: true, // checks for valid integers
-        is: /^[a-z]+$/i, // same as the previous example using real RegExp
-        isAlphanumeric: true, // will only allow alphanumeric characters, so "_abc" will fail
+       
       },
     },
     created_by: {
@@ -101,7 +88,6 @@ const Product = db.define(
       validate: {
         isNumeric: true, // will only allow numbers
         isInt: true, // checks for valid integers
-        is: /^[a-z]+$/i, // same as the previous example using real RegExp
         isAlphanumeric: true, // will only allow alphanumeric characters, so "_abc" will fail
       },
     },
@@ -111,31 +97,29 @@ const Product = db.define(
       validate: {
         isNumeric: true, // will only allow numbers
         isInt: true, // checks for valid integers
-        is: /^[a-z]+$/i, // same as the previous example using real RegExp
-        isAlphanumeric: true, // will only allow alphanumeric characters, so "_abc" will fail
       },
     },
     created_at: {
-      field: 'created_at',
+      field: "created_at",
       type: DataTypes.DATE,
       validate: {
-        isDate: true,// only allow date strings
-      }
+        isDate: true, // only allow date strings
+      },
     },
 
     updated_at: {
-      field: 'updated_at',
+      field: "updated_at",
       type: DataTypes.DATE,
       validate: {
-        isDate: true,// only allow date strings
-      }
+        isDate: true, // only allow date strings
+      },
     },
   },
   {
     // Freeze Table Name
     freezeTableName: true,
-    createdAt: 'created_at',
-      updatedAt: 'updated_at'
+    createdAt: "created_at",
+    updatedAt: "updated_at",
   }
 );
 
