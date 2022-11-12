@@ -29,7 +29,6 @@ router.get('/products/f/price-asc', getProductsOrderPriceASC);
 router.get('/products/f/price-desc', getProductsOrderPriceDESC);
 // Route get all products order by Category
 router.get('/products/f/cate/:id', getProductByCategory);
-
 // Route get product by id
 router.get('/products/:id', getProductById);
 // Route create a new product

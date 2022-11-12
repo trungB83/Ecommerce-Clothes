@@ -9,7 +9,20 @@ import { ValidationError } from "sequelize";
 // Get all products
 export const getProducts = async (req, res) => {
   try {
-    const product = await Product.findAndCountAll({ limit: 4 });
+    const pageAsNumber = Number.parseInt(req.query.page);
+    const sizeAsNumber = Number.parseInt(req.query.size);
+    let page = 0;
+    if (Number.isNaN(pageAsNumber) && pageAsNumber > 0) {
+      page = pageAsNumber;
+    }
+    let size = 10;
+    if (!Number.isNaN(sizeAsNumber) && sizeAsNumber > 0 && sizeAsNumber < 10) {
+      size = sizeAsNumber;
+    }
+    const product = await Product.findAndCountAll({
+      limit: size,
+      offset: page * size,
+    });
     res.send({
       data: product,
       success: true,
@@ -86,7 +99,9 @@ export const getProductsOrderPriceDESC = async (req, res) => {
 
 // Get product by id
 export const getProductById = async (req, res) => {
+  console.log(req.params);
   try {
+    
     const product = await Product.findAll({
       where: {
         product_id: req.params.id,

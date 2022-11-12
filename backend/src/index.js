@@ -1,17 +1,15 @@
-// Import express
+// import external libraries
 import express from "express";
-// Import cors
 import cors from "cors";
-// Import connection
-import db from "./configs/database.js";
-// Import router
-import Router from "./routes/routes.js";
 
-// Init express
+// import internal libraries
+import db from "./configs/database.js";
+import routers from "./routes/routes.js";
+import { APP_PORT } from "./configs/common.js";
 const app = express();
-// use express json
+
+// middlewares 
 app.use(express.json());
-// use cors
 app.use(cors());
 
 // Testing database connection 
@@ -22,8 +20,8 @@ try {
     console.error('Unable to connect to the database:', error);
 }
 
-// use router
-app.use('/api/v1', Router);
+// use routers
+app.use('/api/v1', routers);
 
 // listen on port
-app.listen(5000, () => console.log('Server running at http://localhost:5000/api/v1'));
+app.listen(APP_PORT, () => console.log(`Server running at http://localhost:${APP_PORT}`));

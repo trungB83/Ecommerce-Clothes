@@ -10,8 +10,9 @@ import {
     getUserRoleAdmin,
     getUserRoleEditor,
     getUserRoleCustomer
- } from "../controllers/User.js";
+ } from "./user.ctrl.js";
  
+
  // Init express router
 const router = express.Router();
  

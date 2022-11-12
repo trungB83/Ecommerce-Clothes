@@ -1,11 +1,11 @@
 // Import Product Model
-import User from "../models/User.js";
+import User from "./user.model.js";
 import { Sequelize, ValidationError } from "sequelize";
-// Get all User
+// get all users
 export const getUsers = async (req, res) => {
   try {
     const data = await User.findAll();
-    res.send({
+    return res.send({
       data: data,
       success: true,
       message: "get User ok",
@@ -15,15 +15,15 @@ export const getUsers = async (req, res) => {
   }
 };
 
-// Get User by id
+// get user by id
 export const getUserById = async (req, res) => {
   try {
-    const data = await User.findAll({
+    const data = await User.findOne({
       where: {
         user_id: req.params.id,
       },
     });
-    res.send(data[0]);
+    return res.send(data[0]);
   } catch (err) {
     console.log(err);
   }
@@ -161,7 +161,7 @@ export const updateUser = async (req, res) => {
   }
 };
 
-// Delete User by id
+// Delete User by id(*)
 export const deleteUser = async (req, res) => {
   try {
     await User.destroy({

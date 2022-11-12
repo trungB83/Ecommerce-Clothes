@@ -5,7 +5,7 @@ import productRouter from "./Product.js";
 import postRouter from "./Post.js";
 import cateProductRouter from './CategoryProduct.js'
 import catePostRouter from './CategoryPost.js'
-import userRouter from './User.js'
+import userRouter from './users/index.js'
 import roleRouter from './Role.js'
 import permisionRouter from "./Permision.js"
 import commentRouter from "./Comment.js"

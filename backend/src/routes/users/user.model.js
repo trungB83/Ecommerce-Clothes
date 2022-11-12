@@ -1,7 +1,7 @@
 // import sequelize
 import { Sequelize } from "sequelize";
 // import connection
-import db from "../configs/database.js";
+import db from "../../configs/database.js";
 
 // init DataTypes
 const { DataTypes } = Sequelize;
@@ -10,22 +10,21 @@ const { DataTypes } = Sequelize;
 const User = db.define(
   "tbl_users",
   {
-    // Define attributes
     // allowNull : true => column get NOTNULL
     user_id: {
       type: Sequelize.BIGINT,
       primaryKey: true,
       allowNull: true,
       validate: {
-        isInt: true, // checks for valid integers
-        isNumeric: true, // will only allow numbers
+        isInt: true, 
+        isNumeric: true, 
       },
     },
     user_email: {
       type: Sequelize.STRING,
       allowNull: false,
       validate: {
-        isEmail: true, // checks for email format (foo@bar.com)
+        isEmail: true, 
       },
     },
     user_username: {
@@ -38,65 +37,65 @@ const User = db.define(
       type: Sequelize.STRING(100),
       allowNull: false,
       validate: {
-        is: ["^[a-z]+$", "i"], // will only allow letters
+        is: ["^[a-z]+$", "i"],
       },
     },
     user_password: {
       type: Sequelize.STRING,
       allowNull: true,
       validate: {
-        is: ["^[a-z]+$", "i"], // will only allow letters
-        isAlphanumeric: true, // will only allow alphanumeric characters, so "_abc" will fail
+        is: ["^[a-z]+$", "i"],
+        isAlphanumeric: true, 
       },
     },
     user_gender: {
       type: Sequelize.TINYINT,
       allowNull: false,
       validate: {
-        isInt: true, // checks for valid integers
-        isNumeric: true, // will only allow numbers
+        isInt: true, 
+        isNumeric: true,
       },
     },
     user_phone: {
       type: Sequelize.STRING(100),
       allowNull: false,
       validate: {
-        is: ["^[a-z]+$", "i"], // will only allow letters
-        isAlphanumeric: true, // will only allow alphanumeric characters, so "_abc" will fail
-        notEmpty: true, // don't allow empty strings
+        is: ["^[a-z]+$", "i"], 
+        isAlphanumeric: true, 
+        notEmpty: true, 
       },
     },
     role_id: {
       type: Sequelize.TINYINT,
       allowNull: false,
       validate: {
-        isNumeric: true, // will only allow numbers
-        isInt: true, // checks for valid integers
+        isNumeric: true, 
+        isInt: true, 
       },
     },
     created_by: {
       type: Sequelize.BIGINT,
       allowNull: false,
       validate: {
-        is: ["^[a-z]+$", "i"], // will only allow letters
-        isAlphanumeric: true, // will only allow alphanumeric characters, so "_abc" will fail
-        notEmpty: true, // don't allow empty strings
+        is: ["^[a-z]+$", "i"], 
+        isAlphanumeric: true, 
+        notEmpty: true,
       },
     },
     updated_by: {
       type: Sequelize.BIGINT,
       allowNull: false,
       validate: {
-        is: ["^[a-z]+$", "i"], // will only allow letters
-        isAlphanumeric: true, // will only allow alphanumeric characters, so "_abc" will fail
-        notEmpty: true, // don't allow empty strings
+        is: ["^[a-z]+$", "i"], 
+        isAlphanumeric: true, 
+        notEmpty: true, 
       },
     },
     created_at: {
       field: "created_at",
       type: DataTypes.DATE,
       validate: {
-        isDate: true, // only allow date strings
+        isDate: true, 
       },
     },
 
@@ -104,8 +103,8 @@ const User = db.define(
       field: "updated_at",
       type: DataTypes.DATE,
       validate: {
-        isDate: true, // only allow date strings
-      },
+        isDate: true,
+      }
     },
   },
   {
