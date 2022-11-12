@@ -1,7 +1,6 @@
 // Import Product Model
 import User from "../models/User.js";
-import {Sequelize} from "sequelize"
-
+import { Sequelize, ValidationError } from "sequelize";
 // Get all User
 export const getUsers = async (req, res) => {
   try {
@@ -26,7 +25,6 @@ export const getUserById = async (req, res) => {
     });
     res.send(data[0]);
   } catch (err) {
-    alert(err);
     console.log(err);
   }
 };
@@ -92,14 +90,35 @@ export const createUser = async (req, res) => {
     res.json({
       message: "User Created",
     });
-  } catch (err) {
-    console.log(err);
-    res.json({
-      message: err.ValidationErrorItem.message ,
-    })
+  } catch (e) {
+    const messages = {};
+    if (e instanceof ValidationError) {
+      e.errors.forEach((error) => {
+        let message;
+        switch (error.validatorKey) {
+          case "isEmail":
+            res.json({ message: "Please enter a valid email" });
+            break;
+          case "isDate":
+            res.json({ message: "Please enter a valid date" });
+            break;
+          case "isInt":
+            res.json({ message: "Please use an integer number" });
+            break;
+          case "is_null":
+            res.json({ message: "Please complete this field" });
+            break;
+          case "not_unique":
+            res.json({
+              message: error.value + " is taken. Please choose another one",
+            });
+            error.path = error.path.replace("_UNIQUE", "");
+        }
+        messages[error.path] = message;
+      });
+    }
   }
 };
-
 
 // Update User by id
 export const updateUser = async (req, res) => {
@@ -112,8 +131,33 @@ export const updateUser = async (req, res) => {
     res.json({
       message: "User Updated",
     });
-  } catch (err) {
-    console.log(err);
+  } catch (e) {
+    const messages = {};
+    if (e instanceof ValidationError) {
+      e.errors.forEach((error) => {
+        let message;
+        switch (error.validatorKey) {
+          case "isEmail":
+            res.json({ message: "Please enter a valid email" });
+            break;
+          case "isDate":
+            res.json({ message: "Please enter a valid date" });
+            break;
+          case "isInt":
+            res.json({ message: "Please use an integer number" });
+            break;
+          case "is_null":
+            res.json({ message: "Please complete this field" });
+            break;
+          case "not_unique":
+            res.json({
+              message: error.value + " is taken. Please choose another one",
+            });
+            error.path = error.path.replace("_UNIQUE", "");
+        }
+        messages[error.path] = message;
+      });
+    }
   }
 };
 
