@@ -1,5 +1,6 @@
 // Import Product Model
 import User from "../models/User.js";
+import {Sequelize} from "sequelize"
 
 // Get all User
 export const getUsers = async (req, res) => {
@@ -93,8 +94,12 @@ export const createUser = async (req, res) => {
     });
   } catch (err) {
     console.log(err);
+    res.json({
+      message: err.ValidationErrorItem.message ,
+    })
   }
 };
+
 
 // Update User by id
 export const updateUser = async (req, res) => {

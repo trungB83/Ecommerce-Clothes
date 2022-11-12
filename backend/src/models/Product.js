@@ -12,7 +12,7 @@ const Product = db.define(
   {
     // Define attributes
     product_id: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.BIGINT,
       primaryKey: true,
       allowNull: false,
       validate: {
