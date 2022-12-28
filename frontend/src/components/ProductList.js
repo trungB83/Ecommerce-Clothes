@@ -88,13 +88,6 @@ const ProductList = (props) => {
                     </p>
                   </div>
                 </Link>
-                <button
-                className="AddToCart"
-                  type="primary"
-                  onClick={() => handleAddProduct(product)}
-                >
-                  Thêm vào giỏ hàng
-                </button>
               </div>
             ))}
           </div>

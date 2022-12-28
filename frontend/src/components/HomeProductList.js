@@ -1,4 +1,4 @@
-import { Pagination } from "antd";
+import { Button, Pagination } from "antd";
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Context from "../store/Context";
@@ -89,13 +89,6 @@ const HomeProductList = (props) => {
                       </p>
                     </div>
                   </Link>
-                  <button
-                    className="AddToCart"
-                    type="primary"
-                    onClick={() => handleAddProduct(product)}
-                  >
-                    Thêm vào giỏ hàng
-                  </button>
                 </div>
               ))}
             </div>
