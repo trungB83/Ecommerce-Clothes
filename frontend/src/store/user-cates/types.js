@@ -1,0 +1,4 @@
+export const GET_LIST_USER_CATE = "GET_LIST_USER_CATE";
+export const ADD_USER_CATE = "ADD_USER_CATE";
+export const UPDATE_USER_CATE = "UPDATE_USER_CATE";
+export const DELETE_USER_CATE = "DELETE_USER_CATE";

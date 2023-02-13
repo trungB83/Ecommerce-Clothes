@@ -1,0 +1,45 @@
+.contactContent-header {
+  height: 230px;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+}
+
+.contactContent-footer {
+  text-align: center;
+  position: relative;
+  height: 100px;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  h2 {
+    position: absolute;
+    font-size: 170%;
+    color: #ffffff;
+    top: 30%;
+    left: 40%;
+  }
+}
+
+.contactContent {
+  padding-top: 40px;
+  .formContact-title {
+    font-weight: 500;
+  }
+  .formContact-logo {
+    padding: 20px;
+  }
+  .formContact-list {
+    li {
+      padding-bottom: 16px;
+    }
+  }
+  .formContact-right {
+    .field-right {
+      font-size: 120%;
+      color: #003366;
+    }
+  }
+}

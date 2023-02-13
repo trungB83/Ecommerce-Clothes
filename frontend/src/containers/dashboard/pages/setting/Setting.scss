@@ -1,5 +1,53 @@
-.page {
-    background: rgb(209, 209, 209);
-    color: black;
-    text-align: center;
+.app-main {
+  .body-content {
+    background: #f7f7f7;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 93.5vh;
+  }
+  .header-form-title {
+    text-transform: capitalize;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  .border-box-widget {
+    position: relative;
+    min-width: 255px;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    background: #fff;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 15px;
+    h2 {
+      font-size: 14px;
+      padding: 8px 8px;
+      margin: 0;
+      line-height: 1.4;
+      border-bottom: 1px solid #ccd0d4;
+      display: block;
+      text-align: left;
+      font-weight: bold;
+      cursor: move;
+    }
+    .right-content {
+      .card-item {
+        width: 100%;
+        margin-bottom: 16px;
+        .ant-card-body {
+          padding: 18px;
+        }
+      }
+      .card-image {
+        .ant-card-body {
+          background-color: rgb(194, 194, 194);
+        }
+        .image-box {
+          max-width: 100%;
+          margin-top: 25px;
+        }
+      }
+    }
+  }
 }

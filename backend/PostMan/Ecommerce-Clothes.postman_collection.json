@@ -1,0 +1,1653 @@
+{
+	"info": {
+		"_postman_id": "96d3e029-cc84-450d-97c4-e823aee435fa",
+		"name": "Ecommerce-Clothes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Options",
+			"item": [
+				{
+					"name": "get options",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/options",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"options"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get option by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/option/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"option",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add option",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"option_name\":\"site-description\",\r\n    \"option_value\": \"Ecommerce Clothes website ecommerce in Viet Nam\",\r\n    \"autoload\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/option",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"option"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update option",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"option_name\":\"site-description\",\r\n    \"option_value\": \"Ecommerce Clothes website ecommerce in Viet Nam 2\",\r\n    \"autoload\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/option/2",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"option",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete option",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "mat_khau",
+								"value": "123456",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/option/11",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"option",
+								"11"
+							],
+							"query": [
+								{
+									"key": "ten_tai_khoan",
+									"value": "trungbui",
+									"disabled": true
+								},
+								{
+									"key": "mat_khau",
+									"value": "trungbui",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "get all post",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"new post\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/posts",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/post/12",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"post",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create a post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"new post\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/post",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete post by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/post/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"post",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update post by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/post/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"post",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all post cate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/post-cates",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"post-cates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post cate by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/post-cate/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"post-cate",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all post-comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/post-comments",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"post-comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all post meta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/post-metas",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"post-metas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all post cate meta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/post-cate-metas",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"post-cate-metas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post-cate-meta by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/post-cate-meta/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"post-cate-meta",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create post-cate-meta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/post-cate-metas",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"post-cate-metas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "get products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/products",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get product by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/product/14",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_name\":\"api test 5\",\r\n    \"product_price\": 100,\r\n    \"product_sale_price\": 90.0,\r\n    \"product_description\": \"hi\",\r\n    \"category_products_id\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/product",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_username\":\"testupdate112\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/user/38",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"38"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "mat_khau",
+								"value": "123456",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_name\":\"api test 5\",\r\n    \"product_price\": 100,\r\n    \"product_sale_price\": 90.0,\r\n    \"product_description\": \"hi\",\r\n    \"category_products_id\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/products",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products"
+							],
+							"query": [
+								{
+									"key": "ten_tai_khoan",
+									"value": "trungbui",
+									"disabled": true
+								},
+								{
+									"key": "mat_khau",
+									"value": "trungbui",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all product cates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/product-cates",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"product-cates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get product cate by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/product-cate/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"product-cate",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "get all orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/orders",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get order by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/order/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"order",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update order by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"name updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/order/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"order",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete order by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/order/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"order",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"payment_id\": 1,\r\n    \"deliver_id\": 1,\r\n    \"phone\": 999,\r\n    \"address\": \"ha noi\",\r\n    \"fullname\": \"hop\",\r\n    \"order_items\": [\r\n        {\r\n            \"product_id\": 21,\r\n            \"name\": \"jacket 1\",\r\n            \"price\": 21,\r\n            \"quantity\": 21\r\n        },\r\n         {\r\n            \"product_id\": 20,\r\n            \"name\": \"jacket 2\",\r\n            \"price\": 21000,\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/order",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"payment_id\": 1,\r\n    \"deliver_id\": 1,\r\n    \"phone\": 999,\r\n    \"address\": \"ha noi\",\r\n    \"fullname\": \"hop 2\",\r\n    \"order_items\": [\r\n        {\r\n            \"product_id\": 21,\r\n            \"name\": \"jacket 999\",\r\n            \"price\": 100,\r\n            \"quantity\": 21,\r\n            \"order_item_id\": 24\r\n        },\r\n         {\r\n            \"order_item_id\": 25,\r\n            \"product_id\": 20,\r\n            \"name\": \"jacket 2\",\r\n            \"price\": 200,\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/order/23",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"order",
+								"23"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all payments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/payments",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": " get all order-items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/order-items",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"order-items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all delivers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/delivers",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"delivers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" :\"hoplb2\",\r\n    \"password\": \"testcreate2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/auth/login",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refreshToken\" :\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0OSwiZW1haWwiOiJob3BsYkBnbWFpbC5jb20iLCJ1c2VybmFtZSI6ImhvcGxiMiIsImZ1bGxuYW1lIjpudWxsLCJzdGF0dXMiOiJhY3RpdmUiLCJ1c2VyX2NhdGVfaWQiOjEsImlhdCI6MTY3NDgwMTI1OCwiZXhwIjoxNjc3MzkzMjU4fQ.K_mlm5ZD7_V4-gSMYEJGiBeecA93JXMgS3iEe-GSMhc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/auth/refresh-token",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"hoplb2\",\r\n    \"password\":\"testcreate2\",\r\n    \"email\":\"hoplb@gmail.com\",\r\n    \"user_cate_id\": 1,\r\n    \"status\":\"active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" :\"\",\r\n    \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/users",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"1\",\r\n    \"password\":\"\",\r\n    \"fullname\":\"test case12\",\r\n    \"email\":\"test@gmail.com\",\r\n    \"status\":\"active\",\r\n    \"createdb\":\"1\",\r\n    \"updatedb\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/user/48",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"48"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all user cates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/user-cates",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user-cates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user cate by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/user-cate/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user-cate",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all user permissions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" :\"\",\r\n    \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/user-permissions",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user-permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user permission by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"1\",\r\n    \"password\":\"\",\r\n    \"fullname\":\"test case12\",\r\n    \"email\":\"test@gmail.com\",\r\n    \"status\":\"active\",\r\n    \"createdb\":\"1\",\r\n    \"updatedb\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/user-permission/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user-permission",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create a permission",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Delete option\",\r\n    \"module\": \"option\",\r\n    \"permission\": \"delete\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/user-permission",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user-permission"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update permission",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Update post\",\r\n    \"module\": \"post\",\r\n    \"permission\": \"create\",\r\n    \"user_cate_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/user-permission/2",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user-permission",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete permission by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/user-permission/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user-permission",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sliders",
+			"item": [
+				{
+					"name": "get all sliders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/sliders",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"sliders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get slider by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/slider/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"slider",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create slider",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test create\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/slider",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"slider"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update slider",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"test update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/slider/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"slider",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete slider by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/slider/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"slider",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all slider cate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/slider-cates",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"slider-cates"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Files",
+			"item": [
+				{
+					"name": "get all files",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/files",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"files"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get file by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/file/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"file",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create a file",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Trungbui/Pictures/Screenshots/Screenshot (1).png"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/file",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update a file",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" :\"test upload\",\r\n    \"description\": \"test update\",\r\n    \"status\": \"active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/file/6",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"file",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Email logs",
+			"item": [
+				{
+					"name": "get all emails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/emails",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"emails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get emails by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/email/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"email",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"to\": \"testemail@gmail.com\",\r\n    \"subject\": \"abcxyz\",\r\n    \"message\": \"create email\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/email",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update email message",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\" : \"udpate test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_path}}/api/v1/email/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"email",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete email by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_path}}/api/v1/email/1",
+							"host": [
+								"{{api_path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"email",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

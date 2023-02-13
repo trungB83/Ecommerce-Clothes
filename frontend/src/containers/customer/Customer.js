@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import CustomerProfile from "../../components/CustomerProfile";
+import Header from "components/Header";
+import Footer from "components/Footer";
+import CustomerProfile from "./CustomerProfile";
 
 const Customer = () => {
   return (

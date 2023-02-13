@@ -1,0 +1,41 @@
+.contactContent-header {
+  height: 230px;
+  overflow: hidden;
+}
+.contactContent-header img {
+  width: 100%;
+}
+
+.contactContent-footer {
+  text-align: center;
+  position: relative;
+  height: 100px;
+}
+.contactContent-footer img {
+  height: 100%;
+  width: 100%;
+}
+.contactContent-footer h2 {
+  position: absolute;
+  font-size: 170%;
+  color: #ffffff;
+  top: 30%;
+  left: 40%;
+}
+
+.contactContent {
+  padding-top: 40px;
+}
+.contactContent .formContact-title {
+  font-weight: 500;
+}
+.contactContent .formContact-logo {
+  padding: 20px;
+}
+.contactContent .formContact-list li {
+  padding-bottom: 16px;
+}
+.contactContent .formContact-right .field-right {
+  font-size: 120%;
+  color: #003366;
+}/*# sourceMappingURL=about-us.css.map */

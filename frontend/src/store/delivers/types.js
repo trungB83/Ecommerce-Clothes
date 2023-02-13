@@ -1,0 +1,4 @@
+export const GET_LIST_DELIVER = "GET_LIST_DELIVER";
+export const ADD_DELIVER = "ADD_DELIVER";
+export const UPDATE_DELIVER = "UPDATE_DELIVER";
+export const DELETE_DELIVER = "DELETE_DELIVER";

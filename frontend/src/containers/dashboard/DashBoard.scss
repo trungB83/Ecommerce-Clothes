@@ -1,0 +1,28 @@
+.dashboard-header {
+	display: flex;
+	background-color: white !important;
+	justify-content: space-between;
+	.dashboard-header__logo {
+		padding-left: 20px;
+	}
+	.dashboard-header__user {
+		padding-right: 20px;
+		.wrapper_user {
+			cursor: pointer;
+			.user_avatar {
+				width: 23px !important;
+				max-width: 23px !important;
+				margin-bottom: 3px;
+				border-radius: 30px;
+			}
+		}
+	}
+}
+.dashboard__aside {
+	.logo {
+		padding: 15px;
+		img {
+			width: 90%;
+		}
+	}
+}

@@ -1,29 +1,45 @@
-// Import express
-import express from "express";
-// Import cors
-import cors from "cors";
-// Import connection
-import db from "./configs/database.js";
-// Import router
-import Router from "./routes/routes.js";
+// import external libraries
+import express from 'express';
+import cors from 'cors';
+import logger from 'morgan';
 
-// Init express
+// import internal libraries
+import db from './configs/database.js';
+import routers from './routes/routes.js';
+import { APP_PORT } from './configs/common.js';
+import chalk from 'chalk';
+
 const app = express();
-// use express json
-app.use(express.json());
-// use cors
-app.use(cors());
 
-// Testing database connection 
+// middlewares
+app.use(express.json());
+app.use(cors());
+app.use(logger('dev'));
+
 try {
-    await db.authenticate();
-    console.log('Connection has been established successfully.');
+  await db.authenticate();
+  console.log(chalk.green('Connect to database successfully'));
 } catch (error) {
-    console.error('Unable to connect to the database:', error);
+  console.log(chalk.red('Unable to connect to the database:', error));
 }
 
-// use router
-app.use('/api/v1', Router);
+app.use('/api/v1', routers);
 
-// listen on port
-app.listen(5000, () => console.log('Server running at http://localhost:5000/api/v1'));
+app.get('/', function (req, res) {
+  return res.status(200).send({
+    name: 'Ecommerce-Clothes APIs',
+    msg: 'API is running...',
+    status: 'OK',
+  });
+});
+
+// catch 404 and forward to error handler
+app.use(function (req, res, next) {
+  res.status(404).send({
+    name: 'Ecommerce-Clothes APIs',
+    msg: 'API route not found',
+    status: 'ERROR',
+  });
+});
+
+app.listen(APP_PORT, () => console.log(chalk.green(`Server running at http://localhost:${APP_PORT}`)));

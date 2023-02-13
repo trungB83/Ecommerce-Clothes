@@ -1,0 +1,39 @@
+.main {
+  padding: 30px 0;
+  background: #ffffff;
+}
+.main .formLogin {
+  border-radius: 15px;
+  background: #f5f5f5;
+  padding: 20px 0 !important;
+  width: 500px;
+  margin: auto !important;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.main .formLogin .formLogin__title {
+  text-align: center;
+  color: #25376a;
+}
+.main .formLogin .ant-form-item {
+  padding: 6px 0;
+  padding-right: 12px;
+  margin: 0 !important;
+  margin-bottom: unset;
+}
+.main .formLogin .ant-form-item .ant-form-item-control {
+  width: 100%;
+  margin: auto;
+}
+.main .formLogin .ant-form-item .ant-btn {
+  width: 100%;
+}
+.main .formLogin .group-cb-forgot .ant-form-item-control-input-content {
+  display: flex;
+  justify-content: space-between;
+}
+.main .formLogin .group-cb-forgot .ant-form-item-control-input-content .group-cb-forgot__link {
+  color: black;
+}
+.main .formLogin .group-cb-forgot .ant-form-item-control-input-content .group-cb-forgot__link:hover {
+  color: #0043ff;
+}/*# sourceMappingURL=register-content.css.map */

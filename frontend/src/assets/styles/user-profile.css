@@ -1,0 +1,39 @@
+.CusstomProfile {
+  text-align: center;
+}
+.CusstomProfile .ant-layout {
+  background-color: transparent;
+}
+.CusstomProfile .CusstomProfile__top {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.CusstomProfile .CusstomProfile__top a {
+  padding-left: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.CusstomProfile .CusstomProfile__middle {
+  padding-bottom: 10px;
+}
+.CusstomProfile .CusstomProfile__bottom {
+  padding-bottom: 20px;
+}
+.CusstomProfile .CusstomProfile__bottom .CusstomProfile__bottom-item {
+  padding-bottom: 10px;
+}
+
+.modalOder .modalOder__products .modalOder__products-table {
+  width: 100%;
+  text-align: center;
+}
+.modalOder .modalOder__products .modalOder__products-table tr, .modalOder .modalOder__products .modalOder__products-table td, .modalOder .modalOder__products .modalOder__products-table th {
+  border: 1px solid rgb(185, 185, 185);
+}/*# sourceMappingURL=user-profile.css.map */

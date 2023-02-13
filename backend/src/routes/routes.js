@@ -1,28 +1,24 @@
-// Import express
-import express from "express";
+import express from 'express';
 
-import productRouter from "./Product.js";
-import postRouter from "./Post.js";
-import cateProductRouter from './CategoryProduct.js'
-import catePostRouter from './CategoryPost.js'
-import userRouter from './User.js'
-import roleRouter from './Role.js'
-import permisionRouter from "./Permision.js"
-import commentRouter from "./Comment.js"
-import cateCommentRouter from "./CategoryComment.js"
- // Init express router
+import productRouter from './products/index.js';
+import postRouter from './posts/index.js';
+import userRouter from './users/index.js';
+import sliderRouter from './sliders/index.js';
+import filesRouter from './files/index.js';
+import emailLogRouter from './email-logs/index.js';
+import optionRouter from './options/index.js';
+import orderRouter from './orders/index.js';
+import statisticRouter from './statistics/index.js';
 const router = express.Router();
- 
-// use router
-router.use(productRouter);
-router.use(cateProductRouter);
-router.use(postRouter);
-router.use(catePostRouter);
-router.use(userRouter);
-router.use(roleRouter);
-router.use(permisionRouter);
-router.use(commentRouter);
-router.use(cateCommentRouter);
 
-// export router
+router.use(productRouter);
+router.use(postRouter);
+router.use(userRouter);
+router.use(sliderRouter);
+router.use(filesRouter);
+router.use(emailLogRouter);
+router.use(optionRouter);
+router.use(orderRouter);
+router.use(statisticRouter);
+
 export default router;

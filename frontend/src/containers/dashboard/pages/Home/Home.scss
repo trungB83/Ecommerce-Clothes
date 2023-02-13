@@ -1,0 +1,86 @@
+.HomeDashBoard {
+  .HomeDashBoard_item {
+    background: white;
+    .HomeDashBoard__title-box {
+      position: relative;
+      min-width: 255px;
+      box-shadow: 0 1px 1px #000;
+      background: #fff;
+      margin-bottom: 20px;
+      overflow: hidden;
+      background: linear-gradient(90deg, #2fa2c1 0%, #23cddd 100%) !important;
+      h1 {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #fff;
+        padding-left: 10px;
+      }
+    }
+    .HomeDashBoard__content-box {
+      h1 {
+        text-align: center;
+        text-transform: uppercase;
+        color: #3598dc;
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      .user-panel {
+        background-color: #3598dc;
+      }
+      .post-panel {
+        background: #32c5d2;
+      }
+      .product-panel {
+        background: #8e44ad;
+      }
+      .HomeDashBoard__content-text {
+        min-height: 150px;
+        display: block;
+        overflow: hidden;
+        border-radius: 4px;
+        color: #fff;
+        position: relative;
+        padding-bottom: 20px;
+        .HomeDashBoard__content-panel {
+          a {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            text-decoration: none !important;
+            color: white;
+            .HomeDashBoard__content-btn--text {
+              text-align: right;
+              font-size: 2em;
+              letter-spacing: 0;
+              font-weight: 300;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.child-panel {
+  justify-content: space-between;
+}
+.DashboardCart-title {
+  color: #111111;
+  font-size: 20px;
+}
+
+.DashboardCart-BarChart {
+  padding-top: 30px;
+}
+
+.DashboardCart-Table {
+  padding-top: 30px;
+  h3 {
+    font-weight: 600;
+    padding: 16px 0;
+    text-align: center;
+  }
+}

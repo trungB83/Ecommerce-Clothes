@@ -1,0 +1,165 @@
+.postCategory {
+  display: flex;
+  padding-top: 30px;
+  .postCategory__content {
+    flex: 1;
+    .postCategory__list {
+      .postCategory__post {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #c5c8c7;
+        padding: 10px 0;
+        margin-right: 15px;
+        color: black;
+        .postCategory__post-img {
+          position: relative;
+          height: auto;
+          overflow: hidden;
+          background-position: 50% 50%;
+          background-size: cover;
+          width: 300px;
+          height: 180px;
+          flex-basis: 30%;
+          img {
+            width: 100%;
+          }
+        }
+        .postCategory__post-text {
+          padding-left: 22px;
+          flex:1;
+          .postCategory__post-title {
+            font-size: 20px;
+            font-weight: 600;
+            padding-bottom: 16px;
+            position: relative;
+          }
+          ::before {
+            content: "";
+            position: absolute;
+            bottom: 17%;
+            left: 0;
+            width: 36px;
+            border-bottom: 2px solid gray;
+          }
+          .postCategory__post-subTitle {
+            margin-top: 0.1em;
+            margin-bottom: 0.1em;
+          }
+        }
+      }
+    }
+  }
+  .postCategory__aside {
+    flex-basis: 22%;
+    .postCategory__aside-block {
+      margin-bottom: 1.5em;
+      .postCategory__asideSearch {
+        display: flex;
+        .postCategory__asideSearch-input {
+          box-sizing: border-box;
+          border: 1px solid #ddd;
+          padding: 0 0.75em;
+          height: 2.507em;
+          font-size: 0.97em;
+          border-radius: 0;
+          max-width: 100%;
+          width: 100%;
+          vertical-align: middle;
+          background-color: #fff;
+          color: #333;
+        }
+        .postCategory__asideSearch-submit {
+          background-color: #199bcd;
+          outline: none;
+          color: white;
+          border: none;
+          padding: 0 0.75em;
+        }
+      }
+      .postCategory__aside-title {
+        font-size: 1em;
+        width: 100%;
+        font-weight: 500;
+        background: gray;
+        display: block;
+
+        color: white;
+        background: linear-gradient(-90deg, #1295cf, #25376a);
+        padding: 10px 10px;
+      }
+      .postCategory__aside-inner {
+        background: whitesmoke;
+        padding: 10px;
+        font-size: 15px;
+        color: black;
+        border: 1px solid #e6e6e6;
+        .postCategory__asideMostView {
+          .postCategory__asideMostView-item {
+            display: flex;
+            border-bottom: 1px solid #e6e6e6;
+            margin-bottom: 7px;
+            padding-bottom: 7px;
+            .postCategory__asideMostView-img {
+              display: table-cell;
+              margin-right: 15px;
+              img {
+                height: 2.8em;
+                width: 2.8em;
+                border-radius: 50%;
+              }
+            }
+            .postCategory__asideMostView-title {
+              color: #25376a;
+            }
+            .postCategory__asideMostView-title:hover {
+              color: #68e5ba;
+            }
+          }
+        }
+        .postCategory__asideCategory {
+          .postCategory__asideCategory-item {
+            border-bottom: 1px solid #e6e6e6;
+            padding-bottom: 7px;
+            margin-bottom: 7px;
+            a {
+              color: black;
+              list-style: none;
+              margin-bottom: 0.3em;
+              text-align: left;
+            }
+          }
+        }
+        .postCategory__aside-vertial-list {
+          .postCategory__aside-vertial-item {
+            border-bottom: 1px solid #e6e6e6;
+            margin-bottom: 7px;
+            padding-bottom: 7px;
+            display: flex;
+            align-items: center;
+            img {
+              width: 60px;
+              height: 60px;
+            }
+            .postCategory__aside-vertial-text {
+              padding-left: 15px;
+              .verticalProduct-title {
+                color: black;
+                font-size: 16px;
+              }
+              .verticalProduct-price {
+                display: flex;
+                .verticalProduct-price__text {
+                  font-weight: 500;
+                  color: red;
+                }
+              }
+            }
+          }
+        }
+      }
+      .postCategory__aside-img {
+        width: 100%;
+      }
+    }
+  }
+}

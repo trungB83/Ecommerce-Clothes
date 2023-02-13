@@ -1,0 +1,4 @@
+export const GET_LIST_PAYMENT = "GET_LIST_PAYMENT";
+export const ADD_PAYMENT = "ADD_PAYMENT";
+export const UPDATE_PAYMENT = "UPDATE_PAYMENT";
+export const DELETE_PAYMENT = "DELETE_PAYMENT";
