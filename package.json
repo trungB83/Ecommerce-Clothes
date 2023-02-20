@@ -6,7 +6,8 @@
   "scripts": {
     "start": "concurrently \"cd backend/old && npm run start\" \"cd frontend && npm run start\"",
     "install-all": "concurrently \"cd backend && npm install\" \"cd frontend && npm install\"",
-    "format": "concurrently \"cd backend && npm run format\" \"cd frontend && npm run format\""
+    "format": "concurrently \"cd backend && npm run format\" \"cd frontend && npm run format\"",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run start\""
   },
   "keywords": [],
   "author": "trungbui",
