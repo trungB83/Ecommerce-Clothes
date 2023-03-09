@@ -24,7 +24,7 @@ import Customer from "containers/customer/Customer";
 import ProductList from "containers/dashboard/pages/product/ProductList";
 import ProductCate from "containers/dashboard/pages/product/ProductCate";
 import PostCate from "containers/dashboard/pages/posts/PostCate";
-import HomeDashBoard from "containers/dashboard/pages/home/Home";
+import HomeDashBoard from "containers/dashboard/pages/Home/Home";
 import UserForm from "containers/dashboard/pages/users/profile/UserForm";
 import PostForm from "containers/dashboard/pages/posts/PostForm";
 import ProductForm from "containers/dashboard/pages/product/ProductForm";

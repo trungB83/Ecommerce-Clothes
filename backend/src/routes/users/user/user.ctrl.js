@@ -40,12 +40,12 @@ export const login = async (req, res) => {
     await user.update({ ...user, token: accessToken });
     const emailHtml = `<p>Xin chào: ${user?.fullname || user?.email}, bạn vừa đăng nhập vào hệ thống web.</p>`;
     await sendMail({
-      from: 'trungbui83@thietkeweb5ngay.com',
-      to: 'luonghop.lc@gmail.com',
+      from: 'noreply@thietkeweb5ngay.com',
+      to: user?.email,
       subject: 'Thông báo đăng nhập tài khoản',
-      html: 'hello',
-      text: 'hello'
-      // html: defaultEmailTemplate('Thông báo đăng nhập tài khoản', emailHtml),
+      // html: 'hello',
+      // text: 'hello'
+      html: defaultEmailTemplate('Thông báo đăng nhập tài khoản', emailHtml),
     });
     return res.status(200).json({
       success: true,
